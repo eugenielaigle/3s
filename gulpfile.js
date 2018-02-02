@@ -11,6 +11,9 @@ var moduleImporter = require('sass-module-importer');
 
 var rename = require('gulp-rename');
 
+// on charge le module imagemin pour minifier les images intégrées dans src
+const imagemin = require('gulp-imagemin');
+
 // on déclare une tache sass, qui appelle une fonction anonyme
 gulp.task('sass', function () {
     // récupère tous les fichiers depuis le dossier sass/**/
@@ -43,11 +46,20 @@ gulp.task('compress', function (cb) {
     );
 });
 
+//images
+gulp.task('minimage', () =>
+    gulp.src('./src/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./dist/assets/img'))
+);
+
 // dès qu'on écrit gulp dans la ligne de commande, il exécute la fonction sass et cssnano
 gulp.task('default', function(){
     gulp.watch('./src/sass/*.scss', ['sass']);
     gulp.watch('./src/js/*.js' , ['compress']);
+    gulp.watch('./src/img/*' , ['minimage']);
 });
+
 /**
  * Created by Eugénie on 30/01/18
  */
