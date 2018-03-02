@@ -27,6 +27,5 @@
     "pump": "^1.0.3",
     "sass-module-importer": "^1.4.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
