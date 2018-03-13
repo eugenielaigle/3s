@@ -20,9 +20,27 @@ $(window).load(function() {
         });
         // Dès que le loader se termine, le texte entre guillemets s'anime
         $(".loader").queue(function() {
-          $("#opening").animate({
-            width: "60%"
-          }, 1000);
+          if (window.matchMedia("(min-width: 768px)").matches) {
+            /* La largeur minimum de l'affichage est 768 px inclus */
+            $("#opening").animate({
+              width: "60%"
+            }, 1000, function(){
+              $("#author").animate({
+                bottom: "-2vh",
+                opacity: "1"
+              }, 400);
+            });
+          } else {
+            /* L'affichage est inférieur à 768px de large */
+            $("#opening").animate({
+              width: "80%"
+            }, 1000, function(){
+              $("#author").animate({
+                bottom: "-2vh",
+                opacity: "1"
+              }, 400);
+            });
+          }
 
           // Fin de l'animation texte
           $(".loader").dequeue();
@@ -40,18 +58,62 @@ $(window).load(function() {
 // Animation texte d'accueil sans variable de session
 
 $(document).ready(function(){
-  $("#openingwithoutloader").animate({
-    width: "60%"
-  }, 1000);
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    /* La largeur minimum de l'affichage est 768 px inclus */
+    $("#openingwithoutloader").animate({
+      width: "60%"
+    }, 1000, function(){
+      $("#author").animate({
+        bottom: "-2vh",
+        opacity: "1"
+      }, 400);
+    });
+  } else {
+    /* L'affichage est inférieur à 768px de large */
+    $("#openingwithoutloader").animate({
+      width: "80%"
+    }, 1000, function(){
+      $("#author").animate({
+        bottom: "-2vh",
+        opacity: "1"
+      }, 400);
+    });
+  }
+  // $("#openingwithoutloader").animate({
+  //   width: "60%"
+  // }, 1000);
 });
 
+// ANIMATION MENU ON TOP + BRAND SIZE
 
-// BOUTON MODAL
+$(document).scroll(function() {
+  if ($(window).width()> 767){
+   if($(window).scrollTop()> 10){
+    $("#brand").css({
+      overflow: "visible!important",
+      width: "5vw",
+      marginTop: "-1.5vh"
+    });
+    $(".navbar").addClass('nav-position');
+    // });
+  }else if ($(window).scrollTop()< 10){
+    $("#brand").css({
+      width: "20vw",
+      marginTop: "-11vh"
+    });
+    $(".navbar").removeClass('nav-position');
+    // });
+  }
+}
+});
+
+// BOUTON > MODAL
 
 $(".bouton").click(function(){
   $(this).toggleClass("btn-active");
   setTimeout(function(){
     $(".modal-content").toggleClass("modal-active");
+    $("#historic").toggleClass("active");
   }, 400);
 
 });
@@ -59,8 +121,42 @@ $(".bouton").click(function(){
 $(".modal-close").click(function(){
   $(this).toggleClass("btn-active");
   $(this).removeClass("btn-active");
+
 });
 
+
+
+// ONCLICK HISTORIC
+
+$("#historique").click(function(){
+  $(".bouton").toggleClass("btn-active");
+  setTimeout(function(){
+    $(".modal-content").toggleClass("modal-active");
+    $("#historic").toggleClass("active");
+  }, 400);
+
+});
+
+// SCROLL DOWN BUTTON
+
+function scrollMe(){
+$("#scrolldown span").fadeIn("fast").animate({
+      top: "40px"}
+      ,1000, function() {
+        $("#scrolldown span").fadeOut("fast", function() {
+          $("#scrolldown span").css({
+              "top": "5px"
+          },100, function(){
+            scrollMe();
+          });
+        });
+      });
+}
+
+$( document ).ready(function() {
+    scrollMe();
+    setInterval("scrollMe();",1500);
+});
 
 
 // ONCLICK CAR BLOCK ANIMATION
@@ -170,12 +266,12 @@ function closeslideblock(){
     left: "-500px"
   }, {
     queue: false,
-    duration: 800
+    duration: 350
   });
   $(".half-block-right").animate({
    right: "-1000px"
- }, 800, function(){
-  $(".block-slide").removeClass('block-slide-active');
+ }, 350, function(){
+  $(".block-slide").removeClass('block-slide-active', {duration:200,effect:'blind'});
   $(".block-inside").removeClass('activity');
   $(".class-title").removeClass('active');
 });
@@ -198,6 +294,7 @@ $('a[href^="#"]').on('click', function(event) {
 $ (function () {
   $ .scrollify ({
     section: ".panel",
+    standardScrollElements: ".overflowscroll",
   });
 });
 
@@ -239,6 +336,57 @@ $(function(){
 jQuery('.same-class').click(function(){
   jQuery('.same-class').removeClass('active');
   jQuery(this).addClass('active');
+});
+
+
+// MENU ACTIVE SWITCH
+
+$(window).load(function(){
+// Cache selectors
+var lastId,
+topMenu = $("#top-menu"),
+topMenuHeight = topMenu.outerHeight()+15,
+// All list items
+menuItems = topMenu.find("a"),
+// Anchors corresponding to menu items
+scrollItems = menuItems.map(function(){
+  var item = $($(this).attr("href"));
+  if (item.length) { return item; }
+});
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+  offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+  $('html, body').stop().animate({
+    scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+// Get container scroll position
+var fromTop = $(this).scrollTop()+topMenuHeight;
+
+// Get id of current scroll item
+var cur = scrollItems.map(function(){
+  if ($(this).offset().top < fromTop)
+    return this;
+});
+// Get the id of the current element
+cur = cur[cur.length-1];
+var id = cur && cur.length ? cur[0].id : "";
+
+if (lastId !== id) {
+  lastId = id;
+// Set/remove active class
+menuItems
+.parent().removeClass("active")
+.end().filter("[href=#"+id+"]").parent().addClass("active");
+}
+});
 });
 
 

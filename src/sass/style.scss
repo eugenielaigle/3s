@@ -1,12 +1,19 @@
 @import 'src/sass/colors';
 
+@font-face {
+  font-family: 'Helvetica Neue LT Std 45 Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Helvetica Neue LT Std 45 Light'), url('../fonts/helvetica-neue.woff') format('woff');
+}
+
 // LOADER START
 
 .loader {
   position : fixed;
   z-index: 99;
-  /*background : url(../../uploads/images/loader-blc.svg) 50% 50% no-repeat;*/
-  background-color: $gris;
+  background: url(../img/Motif_gris.jpg) no-repeat;
+  background-size: cover;
   top : 0px;
   left : 0px;
   height : 100%;
@@ -41,6 +48,9 @@
 body{
   width: 100%;
   margin: 0;
+  font-family: 'Helvetica Neue LT Std 45 Light';
+  font-size: 1em;
+  background-color: $gris;
 }
 
 section{
@@ -52,13 +62,106 @@ a{
   text-decoration: none!important;
 }
 
+// NAVBAR
+
+.navbar{
+  z-index: 90;
+  position: fixed;
+  top: 15vh;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  transition: top .3s linear;
+}
+
+@media (min-width: 1200px){
+  .colored-container {
+    width: 90%;
+  }
+}
+.nav-position{
+  top: 0;
+  transition: top .3s linear;
+}
+
+.colored-container{
+  background-color: #fff;
+}
+
+#brand{
+  height: auto;
+  width: 20vw;
+  margin-top: -11vh;
+  margin-left: 8vw;
+}
+
+@media (max-width: 800px) and (min-width: 767px){
+  #brand{
+    width: 20vw;
+    margin-top: -4vh;
+    margin-left: 4vw;
+  }
+}
+
+.navbar-collapse.collapse{
+  height: 5vh;
+}
+
+@media (min-width: 768px){
+  .navbar-nav {
+    float: right;
+    margin-right: -2vw;
+    li{
+      margin: 15px 4vw;
+      border-left: 1px solid rgba(241,149,0,0.6);
+      border-right: 1px solid rgba(241,149,0,0.6);
+      a{
+        padding: 0;
+        p{
+          padding: 5px 15px;
+          color: rgba(241,149,0,0.6);
+        }
+      }
+      // a:hover{
+      //   p{
+      //     color:$orange!important;
+      //     font-weight: bolder;
+      //   }
+      // }
+    }
+  }
+
+
+  .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+    background-color: transparent;
+    margin: 0 -30px;
+    p{
+      color: $orange!important;
+    }
+  }
+
+  .navbar-default .navbar-nav>.active , .navbar-default .navbar-nav>.active>a:focus li, .navbar-default .navbar-nav>.active>a:hover li{
+    border-top: 1px solid $orange;
+    border-bottom: 1px solid $orange;
+    color: $orange;
+    border-left: none;
+    border-right: none;
+    font-weight: bold;
+    margin: 15px 7.5vw;
+  }
+
+}
+
 // SECTION ACCUEIL #1 START
 
 #presentation{
   background-color: $gris;
+  position: relative;
 }
 h1{
   color: black;
+  font-size: 1.8em;
 }
 
 h3{
@@ -73,23 +176,68 @@ h3{
 
 #fadewithoutloader, #fadeinleft, .sentence{
   width: 100%;
+  position: relative;
+  z-index: 1;
+
+  hr{
+    border: 1px solid orange;
+    width: 12vw;
+    margin-left: 53%;
+  }
+  #author{
+    position: absolute;
+    z-index: 0;
+    right: 58vw;
+    bottom: 0;
+    opacity: 0;
+    margin-right: -40vh;
+    font-size: 1.5em;
+    font-style: italic;
+  }
+}
+
+@media (min-width: 2000px){
+  #fadewithoutloader, #fadeinleft, .sentence{
+    #author{
+      right: 63vw;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  #fadewithoutloader, #fadeinleft, .sentence{
+    #author{
+      right: 100vw;
+    }
+  }
+}
+
+#fadewithoutloader, #fadeinleft{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .sentence{
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .title{
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  text-align: justify;
+  width: 30%;
+  letter-spacing: 1.06px;
+  background-color: $gris;
 }
 
 .opening-animation{
   position: absolute;
   width: 100%;
-  z-index: 1;
+  height: 20%;
+  z-index: 2;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -110,24 +258,37 @@ h3{
 .quote-left{
   display: flex;
   justify-content: flex-end;
+  align-items: flex-start;
   left: 0;
 }
 
 .quote-right{
   display: flex;
   justify-content: flex-start;
+  align-items: flex-end;
   right: 0;
 }
 
 
+@media (max-width: 767px){
+  .title{
+    width: 40%;
+  }
+
+}
+
 // BOUTON > MODAL
 
 .section-qsn{
+  position: absolute;
+  z-index: 2;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   width: 80%;
-  height: 60%;
+  height: 65%;
+  top: 20vh;
+  right: 10vw;
   margin: 0 auto;
 
   .bouton-action{
@@ -136,8 +297,8 @@ h3{
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      width: 12.5em;
-      height: 4em;
+      width: 20em;
+      height: 2.5em;
       cursor: pointer;
       background-color: $orange;
       color: white;
@@ -151,10 +312,13 @@ h3{
         z-index: -1;
         visibility: hidden;
         opacity: 0;
-        background-color: transparent;
+        background-color: $white;
+        color: $black;
+        border-radius: 0;
+        padding: 5vh 5vw;
         border: none;
         box-shadow: none;
-        transition: visibility 3s linear, opacity .5s linear;
+        transition: visibility .3s linear, opacity .4s linear;
         hr{
           display: none;
         }
@@ -168,46 +332,55 @@ h3{
     .btn-active{
       width: 80vw;
       height: 50vh;
+      background-image: url(../img/motif_orange.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
       position: relative;
       cursor: default;
       transition: height .5s ease-in-out, width .5s ease-in-out;
       h2{
-        font-size: 2em;
+        font-size: 0em;
         transition: font-size .5s linear;
       }
       .modal-active{
         visibility: visible;
-        position: static;
+        position: relative;
         z-index: 99;
         opacity: 1;
-        transition: visibility 3s linear, opacity .5s linear;
-        text-align: justify;
+        transition: visibility .3s linear, opacity .4s linear;
+        text-align: center;
         margin-left: 10%;
         margin-right: 10%;
+        h3{
+          font-size: 2em;
+          font-weight: bolder;
+          letter-spacing: 1px;
+        }
         hr{
-          width: 20%;
-          color: white;
-          background: white;
-          // border-top: 3px white;
+          width: 60%;
+          color: black;
+          background: black;
+          border: 1px solid black;
           display: block;
-          // margin-top: -0.5em;
-          // margin-bottom: 1em;
+          margin-top: 0;
+        }
+        p{
+          text-align: justify;
         }
 
       }
 
       .modal-close{
+        background-image: url(../img/close.png);
+        background-size: contain;
+        background-repeat: no-repeat;
         display: block;
-        height: auto;
-        background-color: rgba(0,0,0,0.5);
-        color: white;
+        width: 20px;
+        height: 20px;
         position: absolute;
         cursor: pointer;
-        top: 0;
-        right: 0;
-        #closeModale{
-          margin: 5px;
-        }
+        top: 5px;
+        right: 5px;
       }
 
     }
@@ -238,47 +411,28 @@ h3{
   }
 }
 
+#scrolldown{
+  position: absolute;
+  bottom: 2vh;
+  left: 50%;
+  height: 60px;
+  width: 25px;
+  border: 2px solid $orange;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  span{
+    display: block;
+    position: absolute;
+    top: 5px;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background: $orange;
+  }
+}
 
 
-// Solution 2
-
-// .cd-section{
-//   text-align: right;
-// }
-
-// .cd-modal-action {
-//   position: relative;
-// }
-// .cd-modal-action .btn {
-//   text-align: center;
-//   width: 12.5em;
-//   height: 4em;
-//   background-color: orange;
-//   transition: color 0.2s 0.3s, width 0.3s 0s;
-// }
-// .cd-modal-action .btn.to-circle {
-//   width: 4em;
-//   color: transparent;
-//   transition: color 0.2s 0s, width 0.3s 0.2s;
-// }
-// .cd-modal-action .cd-modal-bg {
-//   position: absolute;
-//   top: 0;
-//   left: 50%;
-//   transform: translateX(-2em);
-//   width: 4em;
-//   height: 4em;
-//   background-color: rgba(0,0,0,0.5);
-//   // border-radius: 50%;
-//   // border-color: grey;
-//   opacity: 0;
-//   visibility: hidden;
-//   transition: visibility 0s 0.5s;
-// }
-// .cd-modal-action .cd-modal-bg.is-visible {
-//   opacity: 1;
-//   visibility: visible;
-// }
 
 // SECTION ACCUEIL #1 END
 
@@ -287,9 +441,14 @@ h3{
 #services{
   position: relative;
   width: 100%;
+  background: url(../img/Motif_gris.jpg) no-repeat;
+  background-size: cover;
 }
 
 .orange{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 40vh;
   width: 100%;
   transition: all .4s ease-in-out;
@@ -301,18 +460,20 @@ h3{
 .content{
   position: absolute;
   z-index: 2;
+  font-weight: bold;
+  font-size: 2em;
+  visibility: hidden;
 }
 
 .transbox{
   position: absolute;
   cursor: pointer;
   z-index: 1;
-  display: none;
-  background-color: $orange;
-  opacity: 0.5;
+  visibility: hidden;
+  background-color: #000;
+  opacity: 0.8;
   width: 100%;
   height:100%;
-  transition: all .4s ease-in-out;
 }
 
 .car, .img-slide{
@@ -324,7 +485,9 @@ h3{
 }
 
 .orange:hover .content, .orange:hover .transbox{
-  display: block;
+  visibility: visible;
+  transition: visibility .4s ease-in-out;
+  color: #fff;
 }
 
 .container-margin{
@@ -343,7 +506,9 @@ h3{
 .block-slide-active{
   opacity: 1!important;
   z-index: 2!important;
-  transition: opacity .1s linear;
+  background: url(../img/Motif_gris.jpg) no-repeat;
+  background-size: cover;
+  transition: opacity .2s linear, background .2s linear;
 }
 
 .block-slide{
@@ -354,7 +519,7 @@ h3{
   left: 0;
   opacity: 0;
   z-index: -1; // à passer en +2 lors de l'anim
-  transition: opacity .1s linear;
+  transition: opacity .5s linear, background .5s linear;
 
   .half-block-slide{
     background-color: white;
@@ -365,6 +530,18 @@ h3{
     top: 0;
     border: 1px solid black;
     margin: 10vh 10vw;
+    #closeBlockSlide{
+      background-image: url(../img/close.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      cursor: pointer;
+      top: 5px;
+      right: 5px;
+    }
   }
 
   .half-block-left{
@@ -401,19 +578,29 @@ h3{
         width: 100%;
         position: relative;
         cursor: pointer;
+        left: 0.35vw;
         .conteneur-title{
           position: absolute;
           // top: -50%;
           top: 20%;
           width: 80%;
-          color: $orange;
-          margin-left: 25px;
+          color: rgba(241,149,0,0.6);
+          margin-left: 12%;
           display: flex;
-          font-size: 0.8em;
+          font-size: 1em;
+          letter-spacing: 1px;
           font-weight: normal;
           text-align: left;
         }
 
+      }
+    }
+
+    @media (min-width: 2000px){
+      #conteneur_regles{
+        .class-title{
+          left: 0.65vw;
+        }
       }
     }
 
@@ -433,15 +620,15 @@ h3{
   .link_regle {
     display: block;
     border: 1px solid orange;
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
     border-radius: 100%;
     // margin: 32%;
     // margin-bottom: 15vh;
     display: flex;
     position: relative;
     box-sizing: border-box;
-    padding: 2px;
+    // padding: 2px;
     background: #fff;
   }
 
@@ -450,7 +637,8 @@ h3{
       background: $orange;
     }
     .conteneur-title h3{
-      font-weight: bold!important;
+      font-weight: bolder!important;
+      color: $orange;
       transition: font-weight .1s linear;
     }
   }
@@ -458,8 +646,8 @@ h3{
   .link_regle span {
     display: block;
     /* background: #FFF; */
-    height: 14px;
-    width: 14px;
+    height: 16px;
+    width: 18px;
     border-radius: 100%;
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
@@ -517,20 +705,41 @@ h3{
     position: relative;
     .slide-inside{
       position: absolute;
-      left: 400px;
+      left: 20%;
       opacity: 0;
-      width: 15em;
-      h2{
-        margin: 1em 1.5em;
-        font-size: 2em;
-        color: $orange;
-        font-weight: bold;
-        text-align: center;
+      width: 80%;
+      text-align: center;
+      img{
+        width: 100%;
+        height: auto;
+        margin-bottom: 5vh;
       }
-      p{
-        text-align: justify;
-        line-height: 1.2em;
+      .overflowscroll{
+        overflow-y: scroll;
+        height: 30vh;
+        p{
+          text-align: justify;
+          line-height: 1.2em;
+          margin-right: 15px;
+        }
       }
+      a:hover button{
+        background-color: rgba(241,149,0,0.6);
+      }
+      a{
+        color: $white;
+        button{
+          background-color: $orange;
+          color: $white;
+          border: none;
+          width: 100%;
+          height: 2.5em;
+          margin-top: 10%;
+        }
+
+      }
+
+
     }
 
   }
@@ -538,137 +747,163 @@ h3{
 }
 }
 
+// Customized Scrollbar
+.overflowscroll::-webkit-scrollbar{
+  width: 5px;
+  height: 100%;
+  background: $gris;
+  border-radius: 10px;
+}
 
+.overflowscroll::-webkit-scrollbar-thumb {
+  background: $orange;
+  border-radius: 10px;
+}
 // SECTION SERVICES #2 END
 
 // SECTION CONTACT & MAP #3 START
+
 
 #infos{
   width: 100vw;
   // display: flex;
   // justify-content: space-around;
-  background-color: $orange;
+  background-color: $gris;
   position: absolute;
   left: 0;
 
+@media (min-width: 2000px){
+    .contact{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      .form-horizontal{
+          width: 80%;
+      }
+    }
+
+}
+  .container-contact{
+    height: 70vh;
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+    width: 75%;
+    // margin-left: 10vw;
+    // margin-right: 10vw;
+
+
+    .row{
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .contact{
+        background-color: #fff;
+        // padding-top: 1em;
+        padding-bottom: 1em;
+        height: 100%;
+        width: 40%;
+        .contact-title{
+          text-align: center;
+          h3{
+            color: #000;
+            font-weight: bold;
+            font-size: 1.5em;
+            border-bottom: 2px solid $orange;
+            margin: 1em 80px 0.2em 80px;
+          }
+          a{
+            color: #000;
+            p{
+              margin-bottom: 0.5em;
+              font-style: italic;
+              letter-spacing: 2px;
+              font-size: 0.8em;
+            }
+          }
+        }
+        .form-group{
+          margin-bottom: 5px;
+          padding-left: 15px;
+          padding-right: 15px;
+
+
+          .form-control{
+            background-color: rgba(255,153,51,0.3);
+            border: 1px solid transparent;
+
+          }
+          #message{
+            background-color: rgba(230,230,230,0.3);
+          }
+          #send{
+            width: 100%;
+            background-color: $orange;
+            border-color: transparent;
+          }
+        }
+
+        .contact-phone{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-top: 1em;
+          padding-bottom: 0.5em;
+          .ou{
+            color: rgba(255,153,51,0.3);
+            font-size: 2em;
+          }
+          a{
+            color: $orange;
+            p{
+              margin-top: 0.5em;
+              margin-bottom: 0.2em;
+            }
+          }
+        }
+      }
+      .map{
+        height: 100%;
+        background-color: #fff;
+        padding: 20px;
+        margin-left: 15px;
+        width: 60%;
+      }
+    }
+  }
+
 }
 
-.map, .contact{
-  // width: 45%;
-  padding-top: 5vh;
-}
-
-// html, body {
-//   height: 100%;
-// }
-
-// .slider {
-//   background: #333;
-//   cursor: pointer;
-//   height: 100px;
-//   margin: 0 auto;
-//   margin-top: -170px;
-//   position: absolute;
-//   top: 110%;
-//   overflow: hidden;
-//   width: 200%;
-// }
-
-// .slider:hover .content {
-//   -webkit-animation-play-state: paused;
-//   -moz-animation-play-state: paused;
-// }
-
-// .slider:hover .paused {
-//   opacity: 1;
-//   -webkit-animation: fade 2s;
-//   -webkit-animation-fill-mode: forwards;
-//   -webkit-animation-delay: 2s;
-//   -moz-animation: fade 2s;
-//   -moz-animation-fill-mode: forwards;
-//   -moz-animation-delay: 2s;
-// }
-
-
-// .content {
-//   background: #fff;
-//   color: white;
-//   height: 100px;
-//   position: absolute;
-//   top: 0;
-//   width: 80%;
-//   -webkit-animation: move linear infinite;
-//   -webkit-animation-duration: 5s;
-//   -moz-animation: move linear infinite;
-//   -moz-animation-duration: 5s;
-// }
-
-// @-webkit-keyframes move {
-//   from {
-//     left: 800px;
-//   }
-//   to {
-//     left: -200px;
-//   }
-// }
-
-// @-webkit-keyframes fade {
-//   from {
-//     opacity: 1;
-//   }
-//   to {
-//     opacity: 0;
-//   }
-// }
-
-// @-moz-keyframes move {
-//   from {
-//     left: -200px;
-//   }
-//   to {
-//     left: 1200px;
-//   }
-// }
-
-// @-moz-keyframes fade {
-//   from {
-//     opacity: 1;
-//   }
-//   to {
-//     opacity: 0;
-//   }
-// }
-
-// ul {
-//   position: relative;
-//   top: 0%;
-// }
-
-// li {
-//   font-size: 1.7em;
-//   display: inline;
-//   padding: 50px;
-// }
-// img{
-//   height: 80px;
-//   width: auto;
-// }
-
-.slideshow {
+.container-partners{
+  height: 10vh;
+  padding: 0;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // position: relative;
+  // margin-left: 14vw;
+  // margin-right: 14vw;
   width: 75%;
-  height: 100px;
-  background-color: #fff;
-  overflow: hidden;
-  border: 3px solid #fff;
-  position: absolute;
-  bottom: 8vh;
-  left: 12.5%;
+
+
+
+  .slideshow {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    overflow: hidden;
+    border: 3px solid #fff;
+    // position: absolute;
+  // bottom: 8vh;
+  // left: 12.5%;
 }
 
 .slideshow ul {
     /* 4 images donc 4 x 100% */
     width: 150%;
-    height: 100px;
+    height: 50px;
     padding:0; margin:0;
     list-style: none;
     display: flex;
@@ -681,6 +916,27 @@ h3{
    float: left;
  }
 
+}
 
+.container-social{
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .fa-instagram, .fa-youtube{
+    background-color: $orange;
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .fa-facebook-square{
+    color: $orange;
+    background-color: #fff;
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 
 // SECTION CONTACT & MAP #3 END
