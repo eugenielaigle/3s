@@ -11,9 +11,9 @@ $(window).load(function() {
         clearInterval(id);
         $(".loader").addClass("transparent");
         $("#myProgress").animate({
-          left: "5%",
-          top: "5%",
-          width: "5%",
+          left: "14%",
+          top: "7%",
+          // width: "5%",
           opacity: "0.25"
         }, 1000, function() {
           $(".loader").fadeOut('1000');
@@ -87,7 +87,7 @@ $(document).ready(function(){
 // ANIMATION MENU ON TOP + BRAND SIZE
 
 $(document).scroll(function() {
-  if ($(window).width()> 767){
+  if ($(window).width()> 767 && $(window).width()< 2000){
    if($(window).scrollTop()> 10){
     $("#brand").css({
       overflow: "visible!important",
@@ -104,6 +104,22 @@ $(document).scroll(function() {
     $(".navbar").removeClass('nav-position');
     // });
   }
+}else if ($(window).width()> 2000){
+  if($(window).scrollTop()> 10){
+    $("#brand").css({
+      overflow: "visible!important",
+      width: "2.5vw",
+      marginTop: "-0.5vh"
+    });
+    $(".navbar").addClass('nav-position');
+    // });
+  }else if ($(window).scrollTop()< 10){
+    $("#brand").css({
+      width: "18vw",
+      marginTop: "-10vh"
+    });
+    $(".navbar").removeClass('nav-position');
+}
 }
 });
 
@@ -113,7 +129,10 @@ $(".bouton").click(function(){
   $(this).toggleClass("btn-active");
   setTimeout(function(){
     $(".modal-content").toggleClass("modal-active");
-    $("#historic").toggleClass("active");
+    // $("#historic").toggleClass("active");
+    if ($("#bouton").hasClass("btn-active") && !$("#historic").hasClass("active")){
+      $("#historic").addClass("active");
+}
   }, 400);
 
 });
@@ -132,16 +151,21 @@ $("#historique").click(function(){
   $(".bouton").toggleClass("btn-active");
   setTimeout(function(){
     $(".modal-content").toggleClass("modal-active");
-    $("#historic").toggleClass("active");
+    // $("#historic").toggleClass("active");
+    if ($("#bouton").hasClass("btn-active") && !$("#historic").hasClass("active")){
+      $("#historic").addClass("active");
+}
   }, 400);
 
 });
+
+
 
 // SCROLL DOWN BUTTON
 
 function scrollMe(){
 $("#scrolldown span").fadeIn("fast").animate({
-      top: "40px"}
+      top: "30px"}
       ,1000, function() {
         $("#scrolldown span").fadeOut("fast", function() {
           $("#scrolldown span").css({

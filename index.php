@@ -31,7 +31,11 @@
   <!-- Loader -->
   <div class="<?php if(!isset($_SESSION['loader'])){ echo "loader";}?>">
     <div id="<?php if(!isset($_SESSION['loader'])){ echo "myProgress";}?>">
-      <div id="<?php if(!isset($_SESSION['loader'])){ echo "myBar";}?>"></div>
+      <div id="<?php if(!isset($_SESSION['loader'])){ echo "myBar";}?>">
+        <?php if(!isset($_SESSION['loader'])){ echo
+          '<img src="./dist/assets/img/logonoir_3SMotors.png" alt="">';}?>
+
+      </div>
     </div>
   </div>
   <?php $_SESSION["loader"] = true; ?>

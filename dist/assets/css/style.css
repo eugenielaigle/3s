@@ -18,18 +18,31 @@
 #myProgress {
   position: absolute;
   z-index: 99;
-  top: 60%;
+  top: 35%;
   left: 37.5%;
-  width: 25%;
-  background-color: #FFFFFF; }
+  background-image: url(../img/logoblanc_3Smotors.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 18vw; }
 
 #myBar {
   width: 1%;
-  height: 10px;
-  background-color: black; }
+  height: 100%;
+  overflow: hidden; }
+
+#myBar img {
+  height: auto;
+  width: 18vw; }
+
+@media (max-width: 800px) and (min-width: 767px) {
+  #myProgress {
+    width: 20vw; }
+  #myBar img {
+    width: 20vw; } }
 
 .transparent {
-  background-color: transparent !important; }
+  background: transparent !important; }
 
 body {
   width: 100%;
@@ -68,8 +81,8 @@ a {
 
 #brand {
   height: auto;
-  width: 20vw;
-  margin-top: -11vh;
+  width: 18vw;
+  margin-top: -10vh;
   margin-left: 8vw; }
 
 @media (max-width: 800px) and (min-width: 767px) {
@@ -84,7 +97,7 @@ a {
 @media (min-width: 768px) {
   .navbar-nav {
     float: right;
-    margin-right: -2vw; }
+    margin-right: 2%; }
   .navbar-nav li {
     margin: 15px 4vw;
     border-left: 1px solid rgba(241, 149, 0, 0.6);
@@ -107,6 +120,14 @@ a {
     border-right: none;
     font-weight: bold;
     margin: 15px 7.5vw; } }
+
+@media (min-width: 2000px) {
+  .navbar-nav {
+    margin-right: 3%; } }
+
+@media (min-width: 768px) and (max-width: 2000px) {
+  .navbar-nav {
+    margin-right: 2%; } }
 
 #presentation {
   background-color: #e6e6e6;
@@ -209,10 +230,10 @@ h3 {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  width: 80%;
+  width: 75%;
   height: 65%;
   top: 20vh;
-  right: 10vw;
+  right: 12.5%;
   margin: 0 auto; }
 
 .section-qsn .bouton-action .bouton {
@@ -251,8 +272,8 @@ h3 {
   display: none; }
 
 .section-qsn .bouton-action .btn-active {
-  width: 80vw;
-  height: 50vh;
+  width: 75vw;
+  height: 52vh;
   background-image: url(../img/motif_orange.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -327,7 +348,7 @@ h3 {
   position: absolute;
   bottom: 2vh;
   left: 50%;
-  height: 60px;
+  height: 50px;
   width: 25px;
   border: 2px solid #f19500;
   border-radius: 50px;
@@ -347,7 +368,10 @@ h3 {
   position: relative;
   width: 100%;
   background: url(../img/Motif_gris.jpg) no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .orange {
   display: flex;
@@ -389,14 +413,14 @@ h3 {
   color: #fff; }
 
 .container-margin {
-  margin: 10vh 10vw;
+  width: 75%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center; }
 
 .container-margin .car-block {
-  width: 45%;
+  width: 50%;
   color: black; }
 
 .block-slide-active {
@@ -405,6 +429,13 @@ h3 {
   background: url(../img/Motif_gris.jpg) no-repeat;
   background-size: cover;
   transition: opacity .2s linear, background .2s linear; }
+
+@media (min-width: 2000px) {
+  .block-slide {
+    font-size: 2em; }
+  .block-slide .half-block-slide #closeBlockSlide {
+    width: 50px;
+    height: 50px; } }
 
 .block-slide {
   width: 100%;
@@ -424,7 +455,7 @@ h3 {
   z-index: 3;
   top: 0;
   border: 1px solid black;
-  margin: 10vh 10vw; }
+  margin: 10vh 12.5%; }
 
 .block-slide .half-block-slide #closeBlockSlide {
   background-image: url(../img/close.png);
@@ -440,7 +471,7 @@ h3 {
 
 .block-slide .half-block-left {
   left: 0;
-  width: 24vw;
+  width: 22vw;
   margin-right: 0vw;
   left: -500px; }
 
@@ -535,7 +566,7 @@ h3 {
 .block-slide .half-block-right {
   padding: 5vh 2vw;
   right: -800px;
-  width: 55vw;
+  width: 52.5vw;
   height: 80vh; }
 
 .block-slide .half-block-right .fa-times {
@@ -564,22 +595,24 @@ h3 {
 
 .block-slide .half-block-right .block-inside .text-slide {
   height: 100%;
-  width: 50%;
+  width: 55%;
   padding-left: 5%;
   display: flex;
   flex-direction: column;
   position: relative; }
 
 .block-slide .half-block-right .block-inside .text-slide .slide-inside {
-  position: absolute;
-  left: 20%;
   opacity: 0;
-  width: 80%;
-  text-align: center; }
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
 
 .block-slide .half-block-right .block-inside .text-slide .slide-inside img {
-  width: 100%;
-  height: auto;
+  height: 20vh;
+  width: auto;
   margin-bottom: 5vh; }
 
 .block-slide .half-block-right .block-inside .text-slide .slide-inside .overflowscroll {
@@ -595,7 +628,8 @@ h3 {
   background-color: rgba(241, 149, 0, 0.6); }
 
 .block-slide .half-block-right .block-inside .text-slide .slide-inside a {
-  color: #ffffff; }
+  color: #ffffff;
+  width: 100%; }
 
 .block-slide .half-block-right .block-inside .text-slide .slide-inside a button {
   background-color: #f19500;
@@ -617,7 +651,8 @@ h3 {
 
 #infos {
   width: 100vw;
-  background-color: #e6e6e6;
+  background: url(../img/Motif_gris.jpg) no-repeat;
+  background-size: cover;
   position: absolute;
   left: 0; }
 
@@ -741,18 +776,12 @@ h3 {
   color: #fff;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  height: 5vh; }
 
-.container-social .fa-instagram, .container-social .fa-youtube {
-  background-color: #f19500;
-  border-radius: 5px;
-  padding: 2px;
-  margin-left: 10px;
-  margin-right: 10px; }
+.container-social img {
+  height: 5vh; }
 
-.container-social .fa-facebook-square {
-  color: #f19500;
-  background-color: #fff;
-  height: 100%;
-  margin-left: 10px;
-  margin-right: 10px; }
+.container-social #social-center {
+  margin-left: 1vw;
+  margin-right: 1vw; }

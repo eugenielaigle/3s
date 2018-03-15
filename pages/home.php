@@ -23,7 +23,7 @@
   <!-- BOUTON MODAL EXEMPLE 1 -->
   <div class="section-qsn">
     <div class="bouton-action">
-      <a href="#" class="bouton">
+      <a href="#" id="bouton" class="bouton">
         <h2>Découvrir l'histoire</h2>
         <div class="modal-content">
           <h3>Qui Sommes-nous ?</h3>
@@ -291,9 +291,9 @@
     </div>
 
     <div class="container-fluid container-social">
-      <i class="fab fa-instagram fa-2x"></i>
-      <i class="fab fa-facebook-square fa-2x"></i>
-      <i class="fab fa-youtube fa-2x"></i>
+      <a href=""><img src="./dist/assets/img/instagram.png" alt="instagram-3S Motors"></a>
+      <a href=""><img id="social-center" src="./dist/assets/img/facebook.png" alt="facebook-3S Motors"></a>
+      <a href=""><img src="./dist/assets/img/youtube.png" alt="youtube-3S Motors"></a>
 
     </div>
   </section>
