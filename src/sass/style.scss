@@ -26,7 +26,7 @@
   z-index: 99;
   top: 35%;
   left: 37.5% ;
-  background-image: url(../img/logoblanc_3Smotors.png);
+  background-image: url(../img/logoblanc_3smotors.png);
   background-size: contain;
   background-repeat: no-repeat;
   height: auto;
@@ -72,9 +72,14 @@ body{
   background-color: $gris;
 }
 
+#content{
+  opacity: 0;
+}
+
 section{
   height: 100vh!important;
   overflow: hidden!important;
+  // display: none;
 }
 
 a{
@@ -84,6 +89,7 @@ a{
 // NAVBAR
 
 .navbar{
+  opacity: 0;
   z-index: 90;
   position: fixed;
   top: 15vh;
@@ -175,13 +181,13 @@ a{
 @media (min-width: 2000px){
   .navbar-nav {
     margin-right: 3%;
-}
+  }
 }
 
 @media (min-width: 768px) and (max-width: 2000px){
   .navbar-nav {
     margin-right: 2%;
-}
+  }
 }
 
 // SECTION ACCUEIL #1 START
@@ -230,9 +236,12 @@ h3{
 @media (min-width: 2000px){
   #fadewithoutloader, #fadeinleft, .sentence{
     #author{
-      right: 63vw;
+      right: 71vw;
     }
   }
+  .opening-animation{
+  height: 6%!important;
+}
 }
 
 @media (max-width: 768px){
@@ -550,13 +559,13 @@ h3{
   .block-slide{
     font-size: 2em;
     .half-block-slide{
-       #closeBlockSlide{
-        width: 50px;
-        height: 50px;
-       }
+     #closeBlockSlide{
+      width: 50px;
+      height: 50px;
     }
-
   }
+
+}
 }
 
 .block-slide{
@@ -645,22 +654,31 @@ h3{
     }
 
     @media (min-width: 2000px){
-      #conteneur_regles{
-        .class-title{
-          left: 0.65vw;
-        }
-      }
-    }
 
-    #conteneur_regles::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 5%;
-      display: block;
-      width: 1px;
-      background: $orange;
+
+      .block-slide{
+        .half-block-left{
+          #conteneur_regles{
+            .class-title{
+              left: 0.65vw;
+             //  .conteneur-title{
+             //   font-size: 1.5em!important;
+             // }
+           }
+         }
+       }
+     }
+   }
+
+   #conteneur_regles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5%;
+    display: block;
+    width: 1px;
+    background: $orange;
     /* margin: -36px 12.5px; */
   }
 
@@ -757,10 +775,10 @@ h3{
       opacity: 0;
       width: 95%;
       height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
       // text-align: center;
       img{
         height: 20vh;
@@ -827,23 +845,77 @@ h3{
   position: absolute;
   left: 0;
 
-@media (min-width: 2000px){
+  @media (min-width: 2000px){
     .contact{
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
       .form-horizontal{
-          width: 80%;
+        width: 60%;
       }
     }
 
+    .container-contact{
+      .row{
+
+        .contact{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          .contact-title{
+            h3{
+              font-size: 4em!important;
+            }
+            a{
+              p{
+                font-size: 2em!important;
+              }
+            }
+          }
+          .form-group{
+
+
+
+            .form-control{
+             height: 3vh!important;
+             font-size: 2em;
+
+           }
+           #message{
+            height: 5vh!important;
+            font-size: 2em;
+          }
+          #send{
+            height: 3vh!important;
+            font-size: 2em;
+          }
+        }
+
+        .contact-phone{
+          font-size: 3em;
+          .ou{
+            font-size: 5em;
+          }
+          a{
+
+            p{
+
+            }
+          }
+        }
+      }
+
+    }
+  }
+
 }
-  .container-contact{
-    height: 70vh;
-    margin-top: 10vh;
-    margin-bottom: 3vh;
-    width: 75%;
+.container-contact{
+  height: 70vh;
+  margin-top: 10vh;
+  margin-bottom: 3vh;
+  width: 75%;
     // margin-left: 10vw;
     // margin-right: 10vw;
 

@@ -2,6 +2,7 @@
       require_once('route.php');
 // $base_url = 'http://' . $_SERVER['HTTP_HOST'];
 // $current_url = $base_url. $_SERVER['REQUEST_URI'];
+      session_start();
 ?>
 
 <!DOCTYPE html>
@@ -10,8 +11,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>3S Motors</title>
-
-
 
   <!-- BOOTSTRAP 3 -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -33,7 +32,7 @@
     <div id="<?php if(!isset($_SESSION['loader'])){ echo "myProgress";}?>">
       <div id="<?php if(!isset($_SESSION['loader'])){ echo "myBar";}?>">
         <?php if(!isset($_SESSION['loader'])){ echo
-          '<img src="./dist/assets/img/logonoir_3SMotors.png" alt="">';}?>
+          '<img src="./dist/assets/img/logonoir_3smotors.png" alt="">';}?>
 
       </div>
     </div>
@@ -43,10 +42,11 @@
   <!-- header -->
   <?php include ('pages/header.php'); ?>
 
+<div id="content">
 
   <?= $content; ?>
 
-
+</div>
 
 
   <!-- footer -->

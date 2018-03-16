@@ -18,6 +18,8 @@ $(window).load(function() {
         }, 1000, function() {
           $(".loader").fadeOut('1000');
         });
+        $("#content").css("opacity", "1");
+        $(".navbar").css("opacity", "1");
         // Dès que le loader se termine, le texte entre guillemets s'anime
         $(".loader").queue(function() {
           if (window.matchMedia("(min-width: 768px)").matches) {
@@ -58,6 +60,8 @@ $(window).load(function() {
 // Animation texte d'accueil sans variable de session
 
 $(document).ready(function(){
+  $("#content").css("opacity", "1");
+  $(".navbar").css("opacity", "1");
   if (window.matchMedia("(min-width: 768px)").matches) {
     /* La largeur minimum de l'affichage est 768 px inclus */
     $("#openingwithoutloader").animate({
@@ -116,7 +120,7 @@ $(document).scroll(function() {
   }else if ($(window).scrollTop()< 10){
     $("#brand").css({
       width: "18vw",
-      marginTop: "-10vh"
+      marginTop: "-8vh"
     });
     $(".navbar").removeClass('nav-position');
 }
@@ -163,7 +167,11 @@ $("#historique").click(function(){
 
 // SCROLL DOWN BUTTON
 
-function scrollMe(){
+$(document).ready(function() {
+    scrollingDown();
+    setInterval(scrollingDown,1500);
+
+function scrollingDown(){
 $("#scrolldown span").fadeIn("fast").animate({
       top: "30px"}
       ,1000, function() {
@@ -171,16 +179,13 @@ $("#scrolldown span").fadeIn("fast").animate({
           $("#scrolldown span").css({
               "top": "5px"
           },100, function(){
-            scrollMe();
+            scrollingDown();
           });
         });
       });
 }
-
-$( document ).ready(function() {
-    scrollMe();
-    setInterval("scrollMe();",1500);
 });
+
 
 
 // ONCLICK CAR BLOCK ANIMATION
@@ -248,7 +253,7 @@ $("#btn_entretien").click(function(){
 
 // ANIMATION BLOCS SERVICES
 
-function slideblock(){
+$(document).ready(function slideblock(){
   $(".half-block-left").animate({
     left: 0
   }, {
@@ -262,7 +267,7 @@ function slideblock(){
   slidetextinside();
   closeslide();
 });
-}
+
 
 function slideimginside(){
   $(".img-slide").animate({
@@ -300,6 +305,7 @@ function closeslideblock(){
   $(".class-title").removeClass('active');
 });
 }
+});
 
 // SMOOTH SCROLL
 
@@ -315,7 +321,7 @@ $('a[href^="#"]').on('click', function(event) {
 
 //SCROLLIFY
 
-$ (function () {
+$(document).ready(function () {
   $ .scrollify ({
     section: ".panel",
     standardScrollElements: ".overflowscroll",
@@ -325,7 +331,7 @@ $ (function () {
 // SLIDER PARTENAIRES
 
 
-$(function(){
+$(document).ready(function(){
   setInterval(function(){
    $(".slideshow ul").animate({marginLeft:-300},800,function(){
     $(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));

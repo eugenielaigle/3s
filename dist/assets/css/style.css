@@ -20,7 +20,7 @@
   z-index: 99;
   top: 35%;
   left: 37.5%;
-  background-image: url(../img/logoblanc_3Smotors.png);
+  background-image: url(../img/logoblanc_3smotors.png);
   background-size: contain;
   background-repeat: no-repeat;
   height: auto;
@@ -51,6 +51,9 @@ body {
   font-size: 1em;
   background-color: #e6e6e6; }
 
+#content {
+  opacity: 0; }
+
 section {
   height: 100vh !important;
   overflow: hidden !important; }
@@ -59,6 +62,7 @@ a {
   text-decoration: none !important; }
 
 .navbar {
+  opacity: 0;
   z-index: 90;
   position: fixed;
   top: 15vh;
@@ -165,7 +169,9 @@ h3 {
 
 @media (min-width: 2000px) {
   #fadewithoutloader #author, #fadeinleft #author, .sentence #author {
-    right: 63vw; } }
+    right: 71vw; }
+  .opening-animation {
+    height: 6% !important; } }
 
 @media (max-width: 768px) {
   #fadewithoutloader #author, #fadeinleft #author, .sentence #author {
@@ -517,7 +523,7 @@ h3 {
   text-align: left; }
 
 @media (min-width: 2000px) {
-  .block-slide .half-block-left #conteneur_regles .class-title {
+  .block-slide .half-block-left .block-slide .half-block-left #conteneur_regles .class-title {
     left: 0.65vw; } }
 
 .block-slide .half-block-left #conteneur_regles::before {
@@ -663,7 +669,29 @@ h3 {
     justify-content: space-around;
     align-items: center; }
   #infos .contact .form-horizontal {
-    width: 80%; } }
+    width: 60%; }
+  #infos .container-contact .row .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+  #infos .container-contact .row .contact .contact-title h3 {
+    font-size: 4em !important; }
+  #infos .container-contact .row .contact .contact-title a p {
+    font-size: 2em !important; }
+  #infos .container-contact .row .contact .form-group .form-control {
+    height: 3vh !important;
+    font-size: 2em; }
+  #infos .container-contact .row .contact .form-group #message {
+    height: 5vh !important;
+    font-size: 2em; }
+  #infos .container-contact .row .contact .form-group #send {
+    height: 3vh !important;
+    font-size: 2em; }
+  #infos .container-contact .row .contact .contact-phone {
+    font-size: 3em; }
+  #infos .container-contact .row .contact .contact-phone .ou {
+    font-size: 5em; } }
 
 #infos .container-contact {
   height: 70vh;
