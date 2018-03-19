@@ -35,6 +35,17 @@
   height: auto;
   width: 18vw; }
 
+#percentage {
+  background-color: transparent;
+  border: none;
+  color: #f19500;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  margin-top: 2vh;
+  margin-left: 2.5vw; }
+
 @media (max-width: 800px) and (min-width: 767px) {
   #myProgress {
     width: 20vw; }
@@ -42,7 +53,8 @@
     width: 20vw; } }
 
 .transparent {
-  background: transparent !important; }
+  background: transparent !important;
+  transition: background .2s linear; }
 
 body {
   width: 100%;
@@ -127,7 +139,10 @@ a {
 
 @media (min-width: 2000px) {
   .navbar-nav {
-    margin-right: 3%; } }
+    margin-right: 3%; }
+  #brand {
+    width: 18vw;
+    margin-top: -10.5vh; } }
 
 @media (min-width: 768px) and (max-width: 2000px) {
   .navbar-nav {
@@ -160,7 +175,7 @@ h3 {
 #fadewithoutloader #author, #fadeinleft #author, .sentence #author {
   position: absolute;
   z-index: 0;
-  right: 58vw;
+  right: 58.5vw;
   bottom: 0;
   opacity: 0;
   margin-right: -40vh;
@@ -169,7 +184,7 @@ h3 {
 
 @media (min-width: 2000px) {
   #fadewithoutloader #author, #fadeinleft #author, .sentence #author {
-    right: 71vw; }
+    right: 58vw; }
   .opening-animation {
     height: 6% !important; } }
 
@@ -438,7 +453,7 @@ h3 {
 
 @media (min-width: 2000px) {
   .block-slide {
-    font-size: 2em; }
+    font-size: 1.2em; }
   .block-slide .half-block-slide #closeBlockSlide {
     width: 50px;
     height: 50px; } }
@@ -508,7 +523,7 @@ h3 {
   width: 100%;
   position: relative;
   cursor: pointer;
-  left: 0.35vw; }
+  left: 0.3vw; }
 
 .block-slide .half-block-left #conteneur_regles .class-title .conteneur-title {
   position: absolute;
@@ -521,10 +536,6 @@ h3 {
   letter-spacing: 1px;
   font-weight: normal;
   text-align: left; }
-
-@media (min-width: 2000px) {
-  .block-slide .half-block-left .block-slide .half-block-left #conteneur_regles .class-title {
-    left: 0.65vw; } }
 
 .block-slide .half-block-left #conteneur_regles::before {
   content: '';
@@ -569,6 +580,10 @@ h3 {
   color: #f19500;
   margin-left: 50%; }
 
+@media (min-width: 2000px) {
+  .block-slide .half-block-left #conteneur_regles .class-title {
+    left: 0.6vw; } }
+
 .block-slide .half-block-right {
   padding: 5vh 2vw;
   right: -800px;
@@ -608,13 +623,15 @@ h3 {
   position: relative; }
 
 .block-slide .half-block-right .block-inside .text-slide .slide-inside {
+  margin-left: 500px;
   opacity: 0;
   width: 95%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  text-align: center; }
 
 .block-slide .half-block-right .block-inside .text-slide .slide-inside img {
   height: 20vh;
@@ -681,17 +698,19 @@ h3 {
     font-size: 2em !important; }
   #infos .container-contact .row .contact .form-group .form-control {
     height: 3vh !important;
-    font-size: 2em; }
+    font-size: 1.2em; }
   #infos .container-contact .row .contact .form-group #message {
-    height: 5vh !important;
-    font-size: 2em; }
+    height: 8vh !important;
+    font-size: 1.2em; }
   #infos .container-contact .row .contact .form-group #send {
     height: 3vh !important;
-    font-size: 2em; }
+    font-size: 1.2em; }
   #infos .container-contact .row .contact .contact-phone {
     font-size: 3em; }
   #infos .container-contact .row .contact .contact-phone .ou {
-    font-size: 5em; } }
+    font-size: 3em; }
+  #infos .container-contact .row .contact .contact-phone .contactez-nous {
+    font-size: 0.6em; } }
 
 #infos .container-contact {
   height: 70vh;
@@ -706,6 +725,10 @@ h3 {
   align-items: center; }
 
 #infos .container-contact .row .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   background-color: #fff;
   padding-bottom: 1em;
   height: 100%;
@@ -730,19 +753,22 @@ h3 {
   letter-spacing: 2px;
   font-size: 0.8em; }
 
-#infos .container-contact .row .contact .form-group {
+#infos .container-contact .row .contact .form-horizontal {
+  width: 60%; }
+
+#infos .container-contact .row .contact .form-horizontal .form-group {
   margin-bottom: 5px;
   padding-left: 15px;
   padding-right: 15px; }
 
-#infos .container-contact .row .contact .form-group .form-control {
+#infos .container-contact .row .contact .form-horizontal .form-group .form-control {
   background-color: rgba(255, 153, 51, 0.3);
   border: 1px solid transparent; }
 
-#infos .container-contact .row .contact .form-group #message {
+#infos .container-contact .row .contact .form-horizontal .form-group #message {
   background-color: rgba(230, 230, 230, 0.3); }
 
-#infos .container-contact .row .contact .form-group #send {
+#infos .container-contact .row .contact .form-horizontal .form-group #send {
   width: 100%;
   background-color: #f19500;
   border-color: transparent; }

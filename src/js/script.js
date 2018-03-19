@@ -4,18 +4,21 @@ $(window).load(function() {
   var elem = document.getElementById("myBar");
   var width = 1;
   var id = setInterval(frame, 10);
+  var input = $("#percentage");
+
 
   function frame() {
     if ($('.loader').length){
-      if (width >= 100) {
+      if (width > 100) {
         clearInterval(id);
+
         $(".loader").addClass("transparent");
         $("#myProgress").animate({
-          left: "14%",
-          top: "7%",
+          // left: "14%",
+          // top: "7%",
           // width: "5%",
-          opacity: "0.25"
-        }, 1000, function() {
+          opacity: "0"
+        }, 100, function() {
           $(".loader").fadeOut('1000');
         });
         $("#content").css("opacity", "1");
@@ -51,7 +54,9 @@ $(window).load(function() {
         //
       } else {
         width++;
+        document.getElementById('percentage').value = elem.style.width;
         elem.style.width = width + '%';
+
       }
     }
   }
@@ -120,7 +125,7 @@ $(document).scroll(function() {
   }else if ($(window).scrollTop()< 10){
     $("#brand").css({
       width: "18vw",
-      marginTop: "-8vh"
+      marginTop: "-10.5vh"
     });
     $(".navbar").removeClass('nav-position');
 }
@@ -253,7 +258,7 @@ $("#btn_entretien").click(function(){
 
 // ANIMATION BLOCS SERVICES
 
-$(document).ready(function slideblock(){
+function slideblock(){
   $(".half-block-left").animate({
     left: 0
   }, {
@@ -267,7 +272,7 @@ $(document).ready(function slideblock(){
   slidetextinside();
   closeslide();
 });
-
+}
 
 function slideimginside(){
   $(".img-slide").animate({
@@ -278,7 +283,7 @@ function slideimginside(){
 
 function slidetextinside(){
   $(".slide-inside").animate({
-    left: "20%",
+    marginLeft: "0",
     opacity: 1
   }, 800)
 }
@@ -305,7 +310,7 @@ function closeslideblock(){
   $(".class-title").removeClass('active');
 });
 }
-});
+
 
 // SMOOTH SCROLL
 

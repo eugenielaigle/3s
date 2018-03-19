@@ -43,6 +43,18 @@
   }
 }
 
+#percentage{
+  background-color: transparent;
+  border: none;
+  color: $orange;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  margin-top: 2vh;
+  margin-left: 2.5vw;
+}
+
 @media (max-width: 800px) and (min-width: 767px){
   #myProgress{
     width: 20vw;
@@ -57,6 +69,7 @@
 
 .transparent{
   background: transparent!important;
+  transition: background .2s linear;
 }
 
 // LOADER END
@@ -100,7 +113,7 @@ a{
   transition: top .3s linear;
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
   .colored-container {
     width: 90%;
   }
@@ -182,6 +195,10 @@ a{
   .navbar-nav {
     margin-right: 3%;
   }
+  #brand{
+    width: 18vw;
+    margin-top: -10.5vh;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 2000px){
@@ -224,7 +241,7 @@ h3{
   #author{
     position: absolute;
     z-index: 0;
-    right: 58vw;
+    right: 58.5vw;
     bottom: 0;
     opacity: 0;
     margin-right: -40vh;
@@ -236,7 +253,7 @@ h3{
 @media (min-width: 2000px){
   #fadewithoutloader, #fadeinleft, .sentence{
     #author{
-      right: 71vw;
+      right: 58vw;
     }
   }
   .opening-animation{
@@ -557,7 +574,7 @@ h3{
 
 @media (min-width: 2000px){
   .block-slide{
-    font-size: 2em;
+    font-size: 1.2em;
     .half-block-slide{
      #closeBlockSlide{
       width: 50px;
@@ -635,7 +652,7 @@ h3{
         width: 100%;
         position: relative;
         cursor: pointer;
-        left: 0.35vw;
+        left: 0.3vw;
         .conteneur-title{
           position: absolute;
           // top: -50%;
@@ -652,23 +669,6 @@ h3{
 
       }
     }
-
-    @media (min-width: 2000px){
-
-
-      .block-slide{
-        .half-block-left{
-          #conteneur_regles{
-            .class-title{
-              left: 0.65vw;
-             //  .conteneur-title{
-             //   font-size: 1.5em!important;
-             // }
-           }
-         }
-       }
-     }
-   }
 
    #conteneur_regles::before {
     content: '';
@@ -725,6 +725,17 @@ h3{
 
 }
 
+@media (min-width: 2000px){
+
+        .half-block-left{
+          #conteneur_regles{
+            .class-title{
+              left: 0.6vw;
+           }
+         }
+       }
+
+   }
 
 .half-block-right{
   padding: 5vh 2vw;
@@ -770,8 +781,7 @@ h3{
     flex-direction: column;
     position: relative;
     .slide-inside{
-      // position: absolute;
-      // left: 20%;
+      margin-left: 500px;
       opacity: 0;
       width: 95%;
       height: 100%;
@@ -779,7 +789,7 @@ h3{
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      // text-align: center;
+      text-align: center;
       img{
         height: 20vh;
         width: auto;
@@ -858,7 +868,6 @@ h3{
 
     .container-contact{
       .row{
-
         .contact{
           display: flex;
           flex-direction: column;
@@ -875,38 +884,29 @@ h3{
             }
           }
           .form-group{
-
-
-
             .form-control{
              height: 3vh!important;
-             font-size: 2em;
-
+             font-size: 1.2em;
            }
            #message{
-            height: 5vh!important;
-            font-size: 2em;
+            height: 8vh!important;
+            font-size: 1.2em;
           }
           #send{
             height: 3vh!important;
-            font-size: 2em;
+            font-size: 1.2em;
           }
         }
-
         .contact-phone{
           font-size: 3em;
           .ou{
-            font-size: 5em;
+            font-size: 3em;
           }
-          a{
-
-            p{
-
-            }
+           .contactez-nous{
+            font-size: 0.6em;
           }
         }
       }
-
     }
   }
 
@@ -926,11 +926,16 @@ h3{
       justify-content: center;
       align-items: center;
       .contact{
+        display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
         background-color: #fff;
         // padding-top: 1em;
         padding-bottom: 1em;
         height: 100%;
         width: 40%;
+
         .contact-title{
           text-align: center;
           h3{
@@ -950,6 +955,9 @@ h3{
             }
           }
         }
+                .form-horizontal{
+        width: 60%;
+
         .form-group{
           margin-bottom: 5px;
           padding-left: 15px;
@@ -969,6 +977,7 @@ h3{
             background-color: $orange;
             border-color: transparent;
           }
+        }
         }
 
         .contact-phone{

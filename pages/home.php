@@ -168,7 +168,7 @@
               <div class="overflowscroll">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, delectus molestiae qui tenetur culpa possimus necessitatibus esse temporibus, consequuntur, animi laudantium nam illo itaque minus ea reiciendis! Quaerat, ab, delectus!</p>
             </div>
-            <a href="https://kgrignard.wixsite.com/monsite">
+            <a target="_blank" href="https://kgrignard.wixsite.com/monsite">
                 <button>Contactez-nous</button>
               </a>
             </div>
@@ -265,7 +265,7 @@
           </form>
           <div class="contact-phone">
             <p class="ou">OU</p>
-            <p>N'hésitez pas à nous contacter au</p>
+            <p class="contactez-nous">N'hésitez pas à nous contacter au</p>
             <a href="tel:+237222301012"><p>+237 2 22 30 10 12</p></a>
             <a href="tel:+327679528889"><p class="margin-tel">+237 6 79 52 88 89</p></a>
           </div>
