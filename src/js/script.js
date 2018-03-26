@@ -38,7 +38,7 @@ $(window).load(function() {
           } else {
             /* L'affichage est inférieur à 768px de large */
             $("#opening").animate({
-              width: "80%"
+              width: "220%"
             }, 1000, function(){
               $("#author").animate({
                 bottom: "-2vh",
@@ -80,7 +80,7 @@ $(document).ready(function(){
   } else {
     /* L'affichage est inférieur à 768px de large */
     $("#openingwithoutloader").animate({
-      width: "80%"
+      width: "220%"
     }, 1000, function(){
       $("#author").animate({
         bottom: "-2vh",
@@ -128,28 +128,46 @@ $(document).scroll(function() {
       marginTop: "-10.5vh"
     });
     $(".navbar").removeClass('nav-position');
-}
+  }
+}else if ($(window).width()< 767){
+  if($(window).scrollTop()> 10){
+    $("#brand").css({
+      overflow: "visible!important",
+      width: "15vw",
+      marginTop: "-1.5vh",
+      marginLeft: "35vw"
+    });
+    $(".navbar").addClass('nav-position');
+    // });
+  }else if ($(window).scrollTop()< 10){
+    $("#brand").css({
+      width: "40vw",
+      marginTop: "-6vh",
+      marginLeft: "17vw"
+    });
+    $(".navbar").removeClass('nav-position');
+    // });
+  }
 }
 });
 
 // BOUTON > MODAL
 
 $(".bouton").click(function(){
+  $(".section-qsn").toggleClass("sq-zindex");
   $(this).toggleClass("btn-active");
   setTimeout(function(){
     $(".modal-content").toggleClass("modal-active");
     // $("#historic").toggleClass("active");
     if ($("#bouton").hasClass("btn-active") && !$("#historic").hasClass("active")){
       $("#historic").addClass("active");
-}
+    }
   }, 400);
-
 });
 
 $(".modal-close").click(function(){
   $(this).toggleClass("btn-active");
   $(this).removeClass("btn-active");
-
 });
 
 
@@ -163,7 +181,7 @@ $("#historique").click(function(){
     // $("#historic").toggleClass("active");
     if ($("#bouton").hasClass("btn-active") && !$("#historic").hasClass("active")){
       $("#historic").addClass("active");
-}
+    }
   }, 400);
 
 });
@@ -173,27 +191,28 @@ $("#historique").click(function(){
 // SCROLL DOWN BUTTON
 
 $(document).ready(function() {
-    scrollingDown();
-    setInterval(scrollingDown,1500);
+  scrollingDown();
+  setInterval(scrollingDown,1500);
 
-function scrollingDown(){
-$("#scrolldown span").fadeIn("fast").animate({
+  function scrollingDown(){
+    $("#scrolldown span").fadeIn("fast").animate({
       top: "30px"}
       ,1000, function() {
         $("#scrolldown span").fadeOut("fast", function() {
           $("#scrolldown span").css({
-              "top": "5px"
+            "top": "5px"
           },100, function(){
             scrollingDown();
           });
         });
       });
-}
+  }
 });
 
 
 
 // ONCLICK CAR BLOCK ANIMATION
+if ($(window).width()> 767){
 
 $(document).ready(function serviceanimation(){
   $("#service1").click(function(){
@@ -310,7 +329,7 @@ function closeslideblock(){
   $(".class-title").removeClass('active');
 });
 }
-
+}
 
 // SMOOTH SCROLL
 

@@ -1,0 +1,151 @@
+@media (max-width: 767px){
+
+/*** SECTION PRESENTATION ***/
+
+// NAVBAR START
+.navbar{
+  z-index: 9!important;
+  .navbar-collapse.collapse{
+    height: auto;
+  }
+  .navbar-header{
+    .navbar-brand{
+      #brand{
+        margin-top: -6vh;
+        margin-left: 17vw;
+        width: 40vw;
+      }
+    }
+  }
+}
+// NAVBAR END
+
+// OPENING SENTENCE START
+.opening-animation{
+  align-items: center;
+  height: 12%!important;
+}
+
+.quotes{
+  height: 100%;
+}
+
+.quote{
+  height: 4vh;
+}
+
+.title{
+  width: 64%!important;
+  letter-spacing: 0!important;
+}
+
+h1{
+  font-size: 1.3em!important;
+}
+
+// OPENING SENTENCE END
+
+// MODAL START
+#presentation{
+
+  .section-qsn{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    justify-content: center;
+    .bouton-action{
+      .bouton{
+        margin-bottom: 17vh;
+        width: 15em;
+      }
+      .btn-active{
+        height: 100vh;
+        width: 100vw!important;
+        margin-bottom: 0vh!important;
+      }
+    }
+  }
+}
+.sq-zindex{
+  z-index: 99!important;
+}
+// MODAL END
+
+/*** SECTION SERVICES ***/
+#services{
+ background: none!important;
+ .container-margin{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.car-block{
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  .transbox{
+    visibility: visible;
+    opacity: 0.6;
+  }
+  .orange{
+    height: 25vh;
+    .content{
+      visibility: visible;
+      color: white;
+      font-size: 1.8em;
+    }
+  }
+  .orange:hover{
+  transform: scale(1);
+}
+}
+}
+
+/*** SECTION CONTACT ***/
+
+#infos{
+  background: none!important;
+  .container-contact{
+    width: 100%!important;
+    height: auto!important;
+    .row{
+      width: 100%;
+      margin-left: 0!important;
+      margin-right: 0!important;
+      margin-bottom: 15px;
+      .contact{
+        width: 100%!important;
+        .contact-title{
+          width: 100%;
+          h3{
+            font-size: 2em!important;
+            padding-bottom: 5px;
+          }
+        }
+        .form-horizontal{
+          width: 90%!important;
+        }
+        .contact-phone a p{
+          font-size: 1.4em;
+          margin-bottom: .7em!important;
+        }
+      }
+    }
+  }
+
+  .container-social #social-center{
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  .container-social img{
+    height: 6vh!important;
+  }
+
+}
+
+}

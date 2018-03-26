@@ -13,8 +13,8 @@
     </div>
     <div id="<?php if(!isset($_SESSION['loader'])){ echo "fadeinleft";}else{ echo "fadewithoutloader";}?>" width="50vw">
       <h1 class="title" data-in-effect="fadeInLeft">Lorem eteni doulor site amet consecteture adipisicing elit</h1>
-      <hr>
-      <h4 id="author">Mr Assaad</h4>
+      <!-- <hr>
+      <h4 id="author">Mr Assaad</h4> -->
     </div>
 
 
@@ -28,10 +28,13 @@
         <div class="modal-content">
           <h3>Qui Sommes-nous ?</h3>
           <hr>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ullam labore corrupti officiis delectus tempora reprehenderit nulla doloribus, sequi non repellendus quas. Eius, iusto, ab. Cumque cupiditate molestiae atque, accusantium.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ullam labore corrupti officiis delectus tempora reprehenderit nulla doloribus, sequi non repellendus quas. Eius, iusto, ab. Cumque cupiditate molestiae atque, accusantium.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ullam labore corrupti officiis delectus tempora reprehenderit nulla doloribus, sequi non repellendus quas. Eius, iusto, ab. Cumque cupiditate molestiae atque, accusantium.
-          </p>
+          <p>Depuis maintenant 30 ans, 3S Motors est spécialisé dans le secteur automobile et pneumatique au Cameroun.</p>
+          <br>
+          <p>Avec des infrastructures modernes à Douala et Yaoundé, une présence à Garoua, Ngaoundéré, Bafoussam, Bertoua et Maroua, ainsi que ses 150 salariés, 3S Motors est la 1ère entreprise de service automobile indépendante du Cameroun. </p>
+          <br>
+          <p>Elle bénéficie d’une image de structure sérieuse fournissant un travail efficace et de qualité.</p>
+          <br>
+          <p>Nous proposons un large choix de services autour de la vente, de la location et de l’entretien de véhicules pour les professionnels et particuliers.</p>
           <div class="modal-close" id="closeModale"></div>
         </div>
       </a>
@@ -151,9 +154,9 @@
             <div class="slide-inside">
               <img src="./dist/assets/img/reparation_et_entretien.png" alt="Réparation et entretien">
               <div class="overflowscroll">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, delectus molestiae qui tenetur culpa possimus necessitatibus esse temporibus, consequuntur, animi laudantium nam illo itaque minus ea reiciendis! Quaerat, ab, delectus!</p>
-            </div>
-            <a href="#infos">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, delectus molestiae qui tenetur culpa possimus necessitatibus esse temporibus, consequuntur, animi laudantium nam illo itaque minus ea reiciendis! Quaerat, ab, delectus!</p>
+              </div>
+              <a href="#infos">
                 <button>Contactez-nous</button>
               </a>
             </div>
@@ -166,9 +169,9 @@
             <div class="slide-inside">
               <img src="./dist/assets/img/loc_de_vehicule.png" alt="Location de véhicules">
               <div class="overflowscroll">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, delectus molestiae qui tenetur culpa possimus necessitatibus esse temporibus, consequuntur, animi laudantium nam illo itaque minus ea reiciendis! Quaerat, ab, delectus!</p>
-            </div>
-            <a target="_blank" href="https://kgrignard.wixsite.com/monsite">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, delectus molestiae qui tenetur culpa possimus necessitatibus esse temporibus, consequuntur, animi laudantium nam illo itaque minus ea reiciendis! Quaerat, ab, delectus!</p>
+              </div>
+              <a target="_blank" href="https://kgrignard.wixsite.com/monsite">
                 <button>Contactez-nous</button>
               </a>
             </div>
@@ -181,9 +184,9 @@
             <div class="slide-inside">
               <img src="./dist/assets/img/pneumatique.png" alt="Pneumatiques">
               <div class="overflowscroll">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, delectus molestiae qui tenetur culpa possimus necessitatibus esse temporibus, consequuntur, animi laudantium nam illo itaque minus ea reiciendis! Quaerat, ab, delectus!</p>
-            </div>
-            <a href="#infos">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, delectus molestiae qui tenetur culpa possimus necessitatibus esse temporibus, consequuntur, animi laudantium nam illo itaque minus ea reiciendis! Quaerat, ab, delectus!</p>
+              </div>
+              <a href="#infos">
                 <button>Contactez-nous</button>
               </a>
             </div>
@@ -250,7 +253,7 @@
               <!-- Textarea -->
               <div class="form-group">
                 <div class="col-md-12">
-                  <textarea class="form-control" id="message" name="message">Message</textarea>
+                  <textarea class="form-control" id="message" name="message" placeholder="Message"></textarea>
                 </div>
               </div>
 
@@ -266,8 +269,8 @@
           <div class="contact-phone">
             <p class="ou">OU</p>
             <p class="contactez-nous">N'hésitez pas à nous contacter au</p>
-            <a href="tel:+237222301012"><p>+237 2 22 30 10 12</p></a>
-            <a href="tel:+327679528889"><p class="margin-tel">+237 6 79 52 88 89</p></a>
+            <a href="tel:677708338"><p>677 70 83 38</p></a>
+            <a href="tel:679528889"><p class="margin-tel">679 52 88 89</p></a>
           </div>
 
 

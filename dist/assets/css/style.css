@@ -1,3 +1,95 @@
+@media (max-width: 767px) {
+  /*** SECTION PRESENTATION ***/
+  .navbar {
+    z-index: 9 !important; }
+  .navbar .navbar-collapse.collapse {
+    height: auto; }
+  .navbar .navbar-header .navbar-brand #brand {
+    margin-top: -6vh;
+    margin-left: 17vw;
+    width: 40vw; }
+  .opening-animation {
+    align-items: center;
+    height: 12% !important; }
+  .quotes {
+    height: 100%; }
+  .quote {
+    height: 4vh; }
+  .title {
+    width: 64% !important;
+    letter-spacing: 0 !important; }
+  h1 {
+    font-size: 1.3em !important; }
+  #presentation .section-qsn {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    justify-content: center; }
+  #presentation .section-qsn .bouton-action .bouton {
+    margin-bottom: 17vh;
+    width: 15em; }
+  #presentation .section-qsn .bouton-action .btn-active {
+    height: 100vh;
+    width: 100vw !important;
+    margin-bottom: 0vh !important; }
+  .sq-zindex {
+    z-index: 99 !important; }
+  /*** SECTION SERVICES ***/
+  #services {
+    background: none !important; }
+  #services .container-margin {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+  #services .car-block {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px; }
+  #services .car-block .transbox {
+    visibility: visible;
+    opacity: 0.6; }
+  #services .car-block .orange {
+    height: 25vh; }
+  #services .car-block .orange .content {
+    visibility: visible;
+    color: white;
+    font-size: 1.8em; }
+  #services .car-block .orange:hover {
+    transform: scale(1); }
+  /*** SECTION CONTACT ***/
+  #infos {
+    background: none !important; }
+  #infos .container-contact {
+    width: 100% !important;
+    height: auto !important; }
+  #infos .container-contact .row {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 15px; }
+  #infos .container-contact .row .contact {
+    width: 100% !important; }
+  #infos .container-contact .row .contact .contact-title {
+    width: 100%; }
+  #infos .container-contact .row .contact .contact-title h3 {
+    font-size: 2em !important;
+    padding-bottom: 5px; }
+  #infos .container-contact .row .contact .form-horizontal {
+    width: 90% !important; }
+  #infos .container-contact .row .contact .contact-phone a p {
+    font-size: 1.4em;
+    margin-bottom: 0.7em !important; }
+  #infos .container-social #social-center {
+    margin-left: 2vw;
+    margin-right: 2vw; }
+  #infos .container-social img {
+    height: 6vh !important; } }
+
 @font-face {
   font-family: 'Helvetica Neue LT Std 45 Light';
   font-style: normal;
@@ -150,7 +242,9 @@ a {
 
 #presentation {
   background-color: #e6e6e6;
-  position: relative; }
+  position: relative;
+  display: flex;
+  justify-content: center; }
 
 h1 {
   color: black;
@@ -182,9 +276,13 @@ h3 {
   font-size: 1.5em;
   font-style: italic; }
 
+@media (min-width: 1200px) and (max-width: 2000px) {
+  #fadewithoutloader #author, #fadeinleft #author, .sentence #author {
+    right: 65vw; } }
+
 @media (min-width: 2000px) {
   #fadewithoutloader #author, #fadeinleft #author, .sentence #author {
-    right: 58vw; }
+    right: 60vw; }
   .opening-animation {
     height: 6% !important; } }
 
@@ -240,10 +338,6 @@ h3 {
   justify-content: flex-start;
   align-items: flex-end;
   right: 0; }
-
-@media (max-width: 767px) {
-  .title {
-    width: 40%; } }
 
 .section-qsn {
   position: absolute;
@@ -327,7 +421,8 @@ h3 {
   background: black;
   border: 1px solid black;
   display: block;
-  margin-top: 0; }
+  margin-top: 0;
+  margin-bottom: 2em; }
 
 .section-qsn .bouton-action .btn-active .modal-active p {
   text-align: justify; }
@@ -368,13 +463,13 @@ h3 {
 #scrolldown {
   position: absolute;
   bottom: 2vh;
-  left: 50%;
   height: 50px;
   width: 25px;
   border: 2px solid #f19500;
   border-radius: 50px;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
 
 #scrolldown span {
   display: block;
@@ -384,6 +479,12 @@ h3 {
   width: 10px;
   border-radius: 100%;
   background: #f19500; }
+
+@media (min-width: 2000px) {
+  .section-qsn .bouton-action .bouton .modal-content {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    font-size: 2em; } }
 
 #services {
   position: relative;
@@ -475,7 +576,6 @@ h3 {
   position: absolute;
   z-index: 3;
   top: 0;
-  border: 1px solid black;
   margin: 10vh 12.5%; }
 
 .block-slide .half-block-slide #closeBlockSlide {
@@ -582,7 +682,11 @@ h3 {
 
 @media (min-width: 2000px) {
   .block-slide .half-block-left #conteneur_regles .class-title {
-    left: 0.6vw; } }
+    left: 0.6vw; }
+  .block-slide .half-block-right .block-inside .text-slide .slide-inside img {
+    height: 30vh !important; }
+  .block-slide .half-block-right .block-inside .text-slide .slide-inside .overflowscroll p {
+    font-size: 1.5em; } }
 
 .block-slide .half-block-right {
   padding: 5vh 2vw;
@@ -834,7 +938,7 @@ h3 {
   height: 5vh; }
 
 .container-social img {
-  height: 5vh; }
+  height: 3vh; }
 
 .container-social #social-center {
   margin-left: 1vw;
