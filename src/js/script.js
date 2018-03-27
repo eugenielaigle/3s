@@ -175,6 +175,7 @@ $(".modal-close").click(function(){
 // ONCLICK HISTORIC
 
 $("#historique").click(function(){
+  $(".section-qsn").toggleClass("sq-zindex");
   $(".bouton").toggleClass("btn-active");
   setTimeout(function(){
     $(".modal-content").toggleClass("modal-active");
@@ -329,6 +330,15 @@ function closeslideblock(){
   $(".class-title").removeClass('active');
 });
 }
+} else{
+  $('.orange').click(function(){
+    $('.block-below').slideUp();
+    $(this).next(".block-below").slideDown(500,'swing');
+  });
+
+  $('.close-block-slide').click(function(){
+    // $(this).prev('.block-below').slideUp();
+  });
 }
 
 // SMOOTH SCROLL

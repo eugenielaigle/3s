@@ -12,7 +12,7 @@
       </div>
     </div>
     <div id="<?php if(!isset($_SESSION['loader'])){ echo "fadeinleft";}else{ echo "fadewithoutloader";}?>" width="50vw">
-      <h1 class="title" data-in-effect="fadeInLeft">Lorem eteni doulor site amet consecteture adipisicing elit</h1>
+      <h1 class="title" data-in-effect="fadeInLeft">Nous mettons toute notre passion au service de nos clients. Notre but, grandir avec vous </h1>
       <!-- <hr>
       <h4 id="author">Mr Assaad</h4> -->
     </div>
@@ -294,9 +294,9 @@
     </div>
 
     <div class="container-fluid container-social">
-      <a href=""><img src="./dist/assets/img/instagram.png" alt="instagram-3S Motors"></a>
-      <a href=""><img id="social-center" src="./dist/assets/img/facebook.png" alt="facebook-3S Motors"></a>
-      <a href=""><img src="./dist/assets/img/youtube.png" alt="youtube-3S Motors"></a>
+      <a href="https://www.instagram.com/3s_motors/"><img src="./dist/assets/img/instagram.png" alt="instagram-3S Motors"></a>
+      <a href="https://www.facebook.com/GarageSSSInterpneus/?ref=bookmarks"><img id="social-center" src="./dist/assets/img/facebook.png" alt="facebook-3S Motors"></a>
+      <a href="https://www.youtube.com/channel/UCzEKo9_q3oEuUjQuZzVM0qQ"><img src="./dist/assets/img/youtube.png" alt="youtube-3S Motors"></a>
 
     </div>
   </section>

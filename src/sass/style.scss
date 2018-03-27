@@ -31,7 +31,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   height: auto;
-  width: 18vw;
+  // width: 18vw;
 }
 
 #myBar {
@@ -40,9 +40,11 @@
   overflow: hidden;
   img{
     height: auto;
-    width: 18vw;
+    // width: 18vw;
   }
 }
+
+
 
 #percentage{
   background-color: transparent;
@@ -56,13 +58,37 @@
   margin-left: 2.5vw;
 }
 
+@media (min-width: 800px){
+  #myProgress{
+    width: 18vw;
+  }
+  #myBar{
+    img{
+      width: 18vw;
+    }
+  }
+}
+
 @media (max-width: 800px) and (min-width: 767px){
   #myProgress{
     width: 20vw;
+    left: 35% ;
   }
   #myBar{
     img{
       width: 20vw;
+    }
+  }
+}
+
+@media (max-width: 766px){
+    #myProgress{
+    width: 30vw;
+    left: 30% ;
+  }
+  #myBar{
+    img{
+      width: 30vw;
     }
   }
 }
