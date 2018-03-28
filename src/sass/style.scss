@@ -79,6 +79,40 @@
       width: 20vw;
     }
   }
+
+  .block-slide{
+    .half-block-left{
+      display: none;
+    }
+    .half-block-right{
+      width: 75vw!important;
+    }
+  }
+
+
+#services{
+.car-block{
+  .orange{
+    background-size: cover!important;
+    background-repeat: no-repeat;
+    .content{
+      visibility: visible;
+      color: white;
+      text-align: center;
+    }
+  }
+  .orange:hover{
+    transform: scale(1);
+  }
+}
+}
+
+.car{
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+    ),url(../img/car.jpg)!important;
+}
 }
 
 @media (max-width: 766px){
@@ -247,7 +281,7 @@ a{
 
 h1{
   color: black;
-  font-size: 1.8em;
+  font-size: 1.3em;
 }
 
 h3{
@@ -257,7 +291,7 @@ h3{
 // SENTENCE BETWEEN QUOTES
 
 .quote{
-  font-size: 6em;
+  height: 4vh;
 }
 
 #fadewithoutloader, #fadeinleft, .sentence{
@@ -291,6 +325,10 @@ h3{
 }
 
 @media (min-width: 2000px){
+  h1{
+  color: black;
+  font-size: 2em;
+}
   #fadewithoutloader, #fadeinleft, .sentence{
     #author{
       right: 60vw;
@@ -299,6 +337,9 @@ h3{
   .opening-animation{
     height: 6%!important;
   }
+  .quote{
+  height: 2vh;
+}
 }
 
 @media (max-width: 768px){
@@ -324,16 +365,24 @@ h3{
 }
 
 .title{
-  text-align: justify;
-  width: 30%;
+  text-align: center;
+  width: 40%;
   letter-spacing: 1.06px;
   background-color: $gris;
+  font-weight: bold;
+}
+
+
+@media (min-width: 1800px){
+  .title{
+  width: 35%;
+  }
 }
 
 .opening-animation{
   position: absolute;
   width: 100%;
-  height: 20%;
+  height: 12%;
   z-index: 2;
   display: flex;
   flex-direction: row;
@@ -553,6 +602,7 @@ h3{
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .orange{
@@ -573,6 +623,7 @@ h3{
   font-weight: bold;
   font-size: 2em;
   visibility: hidden;
+  text-align: center;
 }
 
 .transbox{
@@ -858,16 +909,16 @@ h3{
       align-items: center;
       text-align: center;
       img{
-        height: 20vh;
+        height: 30vh;
         width: auto;
-        margin-bottom: 5vh;
+        margin-bottom: 0vh;
       }
       .overflowscroll{
         overflow-y: scroll;
         height: 30vh;
         p{
           text-align: justify;
-          line-height: 1.2em;
+          line-height: 1.4em;
           margin-right: 15px;
         }
       }
@@ -1105,7 +1156,8 @@ h3{
 
 .slideshow ul {
     /* 4 images donc 4 x 100% */
-    width: 150%;
+    // width: 150%;
+    width: 100%;
     height: 50px;
     padding:0; margin:0;
     list-style: none;

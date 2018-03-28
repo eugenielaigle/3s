@@ -28,7 +28,7 @@ $(window).load(function() {
           if (window.matchMedia("(min-width: 768px)").matches) {
             /* La largeur minimum de l'affichage est 768 px inclus */
             $("#opening").animate({
-              width: "60%"
+              width: "70%"
             }, 1000, function(){
               $("#author").animate({
                 bottom: "-2vh",
@@ -70,7 +70,7 @@ $(document).ready(function(){
   if (window.matchMedia("(min-width: 768px)").matches) {
     /* La largeur minimum de l'affichage est 768 px inclus */
     $("#openingwithoutloader").animate({
-      width: "60%"
+      width: "70%"
     }, 1000, function(){
       $("#author").animate({
         bottom: "-2vh",
@@ -149,6 +149,11 @@ $(document).scroll(function() {
     // });
   }
 }
+});
+
+
+$('.navbar-toggle').click(function(){
+    $("#icon-bar").toggleClass('close-menu');
 });
 
 // BOUTON > MODAL
@@ -331,14 +336,27 @@ function closeslideblock(){
 });
 }
 } else{
-  $('.orange').click(function(){
-    $('.block-below').slideUp();
-    $(this).next(".block-below").slideDown(500,'swing');
-  });
 
-  $('.close-block-slide').click(function(){
-    // $(this).prev('.block-below').slideUp();
-  });
+var clicks = 0;
+
+        $('.orange').click(function(){
+          if(clicks == 0){
+            $('.orange').removeClass("car-transform");
+            $(this).toggleClass("car-transform");
+            $('.block-below').slideUp();
+            $(this).next(".block-below").slideDown(500,'swing');
+            clicks++;
+            console.log("abierto");
+          }else{
+            $('.orange').removeClass("car-transform");
+            $(this).toggleClass("car-transform");
+            $('.block-below').slideUp();
+            $(this).next(".block-below").slideDown(500,'swing');
+            clicks--;
+            console.log("cerrado");
+          }
+          console.log(clicks);
+        });
 }
 
 // SMOOTH SCROLL
@@ -365,13 +383,13 @@ $(document).ready(function () {
 // SLIDER PARTENAIRES
 
 
-$(document).ready(function(){
-  setInterval(function(){
-   $(".slideshow ul").animate({marginLeft:-300},800,function(){
-    $(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
-  })
- }, 3500);
-});
+// $(document).ready(function(){
+//   setInterval(function(){
+//    $(".slideshow ul").animate({marginLeft:-300},800,function(){
+//     $(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
+//   })
+//  }, 3500);
+// });
 
 
 //SLICK

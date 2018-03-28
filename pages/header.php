@@ -5,9 +5,10 @@
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
+        <div id="icon-bar"></div>
+        <!-- <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> -->
       </button>
       <a class="navbar-brand" href="#">
         <img alt="Brand" src="dist/assets/img/logonoir_3smotors.png" id="brand">

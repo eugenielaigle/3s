@@ -11,7 +11,7 @@ foreach($gets AS $get){
 	${'get_'.$i} = $get;
 }
 
-$url = 'localhost/3s/';
+$url = 'https://'.$_SERVER['SERVER_NAME'].'/';
 
 if($get==''){
   if ($detect->isMobile() && !$detect->isTablet()){

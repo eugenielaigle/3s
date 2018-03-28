@@ -12,7 +12,7 @@
       </div>
     </div>
     <div id="<?php if(!isset($_SESSION['loader'])){ echo "fadeinleft";}else{ echo "fadewithoutloader";}?>" width="50vw">
-      <h1 class="title" data-in-effect="fadeInLeft">Nous mettons toute notre passion au service de nos clients. Notre but, grandir avec vous </h1>
+      <h1 class="title text-center" data-in-effect="fadeInLeft">Nous mettons toute notre passion au service de nos clients. <br> Notre but, grandir avec vous. </h1>
       <!-- <hr>
       <h4 id="author">Mr Assaad</h4> -->
     </div>
@@ -138,8 +138,9 @@
             <div class="slide-inside">
               <img src="./dist/assets/img/vente_de_vehicule.png" alt="Vente de véhicules">
               <div class="overflowscroll">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, delectus molestiae qui tenetur culpa possimus necessitatibus esse temporibus, consequuntur, animi laudantium nam illo itaque minus ea reiciendis! Quaerat, ab, delectus!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, delectus molestiae qui tenetur culpa possimus necessitatibus esse temporibus, consequuntur, animi laudantium nam illo itaque minus ea reiciendis! Quaerat, ab, delectus!</p>
+                <p>3S Motors vous propose à la vente des véhicules neufs et d’occasion, de la citadine au SUV en passant par le pickup, avec possibilité de reprise.
+                <p>Pour tout achat d’un véhicule, nous assurons le SAV.</p><br>
+                <p>Venez découvrir nos différentes gammes et demandez votre devis.</p>
               </div>
               <a href="#infos">
                 <button>Contactez-nous</button>
@@ -154,7 +155,9 @@
             <div class="slide-inside">
               <img src="./dist/assets/img/reparation_et_entretien.png" alt="Réparation et entretien">
               <div class="overflowscroll">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, delectus molestiae qui tenetur culpa possimus necessitatibus esse temporibus, consequuntur, animi laudantium nam illo itaque minus ea reiciendis! Quaerat, ab, delectus!</p>
+                <p>Chez 3S Motors, nous sommes spécialistes dans tous les domaines d’activités, à savoir : entretien, réparation, tôlerie-peinture, froid et électricité</p><br>
+                <p>En collaboration avec les autres concessionnaires au Cameroun, et nos différents fournisseurs, nous assurons un approvisionnement continu en pièces d’origine.</p><br>
+                <p>N’hésitez pas à nous demander un diagnostic, même sans RDV, nous ferons le nécessaire pour prendre en charge votre véhicule.</p>
               </div>
               <a href="#infos">
                 <button>Contactez-nous</button>
@@ -169,7 +172,8 @@
             <div class="slide-inside">
               <img src="./dist/assets/img/loc_de_vehicule.png" alt="Location de véhicules">
               <div class="overflowscroll">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, delectus molestiae qui tenetur culpa possimus necessitatibus esse temporibus, consequuntur, animi laudantium nam illo itaque minus ea reiciendis! Quaerat, ab, delectus!</p>
+                <p>Que vous ayez besoin d'un véhicule pour une journée, quelques jours voire plusieurs mois, 3S MOTORS vous propose un large choix de véhicules de tout type (berline, SUV, 4x4, pickup) afin de répondre à tous vos besoins de location. Nous vous proposons nos services avec ou sans chauffeur.</p> <br>
+                <p>Pour tous vos trajets en ville, optez pour nos services My Cab. Au dépôt ou à l’heure, vous serez pris en charge en toute sérénité à bord de nos véhicules 3S MOTORS.</p>
               </div>
               <a target="_blank" href="https://kgrignard.wixsite.com/monsite">
                 <button>Contactez-nous</button>
@@ -184,7 +188,11 @@
             <div class="slide-inside">
               <img src="./dist/assets/img/pneumatique.png" alt="Pneumatiques">
               <div class="overflowscroll">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, delectus molestiae qui tenetur culpa possimus necessitatibus esse temporibus, consequuntur, animi laudantium nam illo itaque minus ea reiciendis! Quaerat, ab, delectus!</p>
+                <p>L’activité pneumatique chez 3S Motors existe depuis 1996 avec Contipartner en 200- à Douala et en 2011 à Yaoundé. </p><br>
+                  <p>Nous fournissons en pneus trois secteurs : Tourisme, Poids lourd et Génie Civil.</p><br>
+                  <p>Notre connaissance approfondie des pneus et notre expertise technique, vous garantit les meilleurs conseils pour les pneus les plus adaptés à votre véhicule.</p><br>
+                  <p>3S Motors propose les marques suivantes du groupe Continental : Matador, Barum et General Tyre.</p><br>
+                  <p>Nous pouvons également fournir toutes les références de pneus des marques Michelin, Pirelli, GT Radial, Double Star, Aufine, Alliance et Advance.</p>
               </div>
               <a href="#infos">
                 <button>Contactez-nous</button>
@@ -284,19 +292,22 @@
     <div class="container container-partners">
       <div class="slideshow slider">
         <ul>
-          <li><img src="./img/Fiat-logo.png" alt="" width="auto" height="40" ></li>
-          <li><img src="./img/Jeep_logo.png" alt="" width="auto" height="40" ></li>
-          <li><img src="./img/Kia_logo.png" alt="" width="auto" height="40" ></li>
-          <li><img src="./img/logo-renault.png" alt="" width="auto" height="40" ></li>
-          <li><img src="./img/chrysler-logo.png" alt="" width="auto" height="40" ></li>
+          <li><img src="./img/continental_def-2.png" alt="" width="auto" height="40" ></li>
+          <li><img src="./img/jeep-def-2.png" alt="" width="auto" height="40" ></li>
+          <li><img src="./img/fiat_pro_def-2.png" alt="" width="auto" height="40" ></li>
+          <li><img src="./img/fiat_def-2.png" alt="" width="auto" height="40" ></li>
+          <!-- <li><img src="./img/continental_def-2.png" alt="" width="auto" height="40" ></li>
+          <li><img src="./img/jeep-def-2.png" alt="" width="auto" height="40" ></li>
+          <li><img src="./img/fiat_pro_def-2.png" alt="" width="auto" height="40" ></li>
+          <li><img src="./img/fiat_def-2.png" alt="" width="auto" height="40" ></li> -->
         </ul>
       </div>
     </div>
 
     <div class="container-fluid container-social">
-      <a href="https://www.instagram.com/3s_motors/"><img src="./dist/assets/img/instagram.png" alt="instagram-3S Motors"></a>
-      <a href="https://www.facebook.com/GarageSSSInterpneus/?ref=bookmarks"><img id="social-center" src="./dist/assets/img/facebook.png" alt="facebook-3S Motors"></a>
-      <a href="https://www.youtube.com/channel/UCzEKo9_q3oEuUjQuZzVM0qQ"><img src="./dist/assets/img/youtube.png" alt="youtube-3S Motors"></a>
+      <a href="https://www.instagram.com/3s_motors/" target="_blank"><img src="./dist/assets/img/instagram.png" alt="instagram-3S Motors"></a>
+      <a href="https://www.facebook.com/GarageSSSInterpneus/?ref=bookmarks" target="_blank"><img id="social-center" src="./dist/assets/img/facebook.png" alt="facebook-3S Motors"></a>
+      <a href="https://www.youtube.com/channel/UCzEKo9_q3oEuUjQuZzVM0qQ" target="_blank"><img src="./dist/assets/img/youtube.png" alt="youtube-3S Motors"></a>
 
     </div>
   </section>
