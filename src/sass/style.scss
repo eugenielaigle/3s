@@ -90,48 +90,96 @@
   }
 
 
-#services{
-.car-block{
-  .orange{
-    background-size: cover!important;
-    background-repeat: no-repeat;
-    .content{
-      visibility: visible;
-      color: white;
-      text-align: center;
+  #services{
+    .car-block{
+      .orange{
+        background-size: cover!important;
+        background-repeat: no-repeat;
+        .content{
+          visibility: visible;
+          color: white;
+          text-align: center;
+        }
+      }
+      .orange:hover{
+        transform: scale(1);
+      }
     }
   }
-  .orange:hover{
-    transform: scale(1);
+
+  .img-vente{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+      ),url(../img/vente.jpg)!important;
   }
-}
-}
 
-.car{
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.6)
-    ),url(../img/car.jpg)!important;
-}
-}
+  .img-reparation{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+      ),url(../img/reparation.jpg)!important;
+  }
 
-@media (max-width: 766px){
+  .img-location{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+      ),url(../img/location.jpg)!important;
+  }
+
+  .img-pneumatique{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+      ),url(../img/pneumatique.jpg)!important;
+  }
+
+  .half-block-right{
+    .block-inside{
+      flex-direction: column!important;
+      .img-slide{
+        width: 100%!important;
+        height: 30%!important;
+        background-size: cover!important;
+      }
+      .text-slide{
+        height: 70%!important;
+        width: 100%!important;
+          // padding-right: 5%;
+
+          .slide-inside{
+            img{
+              height: 20vh!important;
+            }
+
+          }
+        }
+      }
+    }
+
+
+
+
+  }
+
+  @media (max-width: 766px){
     #myProgress{
-    width: 30vw;
-    left: 30% ;
-  }
-  #myBar{
-    img{
       width: 30vw;
+      left: 30% ;
+    }
+    #myBar{
+      img{
+        width: 30vw;
+      }
     }
   }
-}
 
 
-.transparent{
-  background: transparent!important;
-  transition: background .2s linear;
-}
+  .transparent{
+    background: transparent!important;
+    transition: background .2s linear;
+  }
 
 // LOADER END
 
@@ -224,12 +272,6 @@ a{
           color: rgba(241,149,0,0.6);
         }
       }
-      // a:hover{
-      //   p{
-      //     color:$orange!important;
-      //     font-weight: bolder;
-      //   }
-      // }
     }
   }
 
@@ -276,7 +318,7 @@ a{
   background-color: $gris;
   position: relative;
   display: flex;
-    justify-content: center;
+  justify-content: center;
 }
 
 h1{
@@ -326,9 +368,9 @@ h3{
 
 @media (min-width: 2000px){
   h1{
-  color: black;
-  font-size: 2em;
-}
+    color: black;
+    font-size: 2em;
+  }
   #fadewithoutloader, #fadeinleft, .sentence{
     #author{
       right: 60vw;
@@ -338,8 +380,8 @@ h3{
     height: 6%!important;
   }
   .quote{
-  height: 2vh;
-}
+    height: 2vh;
+  }
 }
 
 @media (max-width: 768px){
@@ -375,7 +417,7 @@ h3{
 
 @media (min-width: 1800px){
   .title{
-  width: 35%;
+    width: 35%;
   }
 }
 
@@ -415,13 +457,6 @@ h3{
   right: 0;
 }
 
-
-// @media (max-width: 767px){
-//   .title{
-//     width: 40%;
-//   }
-
-// }
 
 // BOUTON > MODAL
 
@@ -637,8 +672,22 @@ h3{
   height:100%;
 }
 
-.car, .img-slide{
-  background-image: url(../img/car.jpg);
+
+.img-vente{
+  background-image: url(../img/vente.jpg);
+}
+
+.img-reparation{
+  background-image: url(../img/reparation.jpg);
+}
+
+.img-location{
+  background-image: url(../img/location.jpg);
+  background-position: 75%!important;
+}
+
+.img-pneumatique{
+  background-image: url(../img/pneumatique.jpg);
 }
 
 .orange:hover{
@@ -790,12 +839,9 @@ h3{
     height: 18px;
     width: 18px;
     border-radius: 100%;
-    // margin: 32%;
-    // margin-bottom: 15vh;
     display: flex;
     position: relative;
     box-sizing: border-box;
-    // padding: 2px;
     background: #fff;
   }
 
@@ -836,22 +882,22 @@ h3{
     }
   }
 
-    .half-block-right{
-      .block-inside{
-        .text-slide{
-          .slide-inside{
-            img{
-                  height: 30vh!important;
-            }
-            .overflowscroll{
-              p{
+  .half-block-right{
+    .block-inside{
+      .text-slide{
+        .slide-inside{
+          img{
+            height: 30vh!important;
+          }
+          .overflowscroll{
+            p{
               font-size: 1.5em;
-            }
             }
           }
         }
       }
     }
+  }
 
 }
 
@@ -980,7 +1026,7 @@ h3{
       justify-content: space-around;
       align-items: center;
       .form-horizontal{
-        width: 60%;
+        width: 100%;
       }
     }
 
@@ -1074,7 +1120,7 @@ h3{
           }
         }
         .form-horizontal{
-          width: 60%;
+          width: 100%;
 
           .form-group{
             margin-bottom: 5px;
@@ -1133,12 +1179,6 @@ h3{
 .container-partners{
   height: 10vh;
   padding: 0;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // position: relative;
-  // margin-left: 14vw;
-  // margin-right: 14vw;
   width: 75%;
 
 
@@ -1149,9 +1189,6 @@ h3{
     background-color: #fff;
     overflow: hidden;
     border: 3px solid #fff;
-    // position: absolute;
-  // bottom: 8vh;
-  // left: 12.5%;
 }
 
 .slideshow ul {

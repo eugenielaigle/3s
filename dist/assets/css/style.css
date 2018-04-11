@@ -6,7 +6,7 @@
   .opening-animation {
     align-items: center;
     height: 20% !important; }
-  #services .car-block .orange .content h2 {
+  #services .car-block .content h2 {
     font-size: 0.8em !important; } }
 
 @media (max-width: 767px) {
@@ -70,6 +70,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center; }
+  #services #service1, #services #service2, #services #service3, #services #service4 {
+    position: relative; }
   #services .car-block {
     width: 100%;
     padding-left: 15px;
@@ -78,18 +80,42 @@
   #services .car-block .orange {
     height: 25vh;
     background-size: cover !important;
-    background-repeat: no-repeat; }
-  #services .car-block .orange .content {
+    background-repeat: no-repeat;
+    filter: brightness(40%);
+    -webkit-filter: brightness(40%); }
+  #services .car-block .content {
     visibility: visible;
-    color: white; }
+    color: white;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
   #services .car-block .orange:hover {
     transform: scale(1); }
-  .car {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/car.jpg) !important; }
+  .img-vente-mobile {
+    background-image: url(../img/vente.jpg); }
+  .img-reparation-mobile {
+    background-image: url(../img/reparation.jpg);
+    filter: brightness(40%);
+    -webkit-filter: brightness(40%); }
+  .img-location-mobile {
+    background-image: url(../img/location.jpg);
+    filter: brightness(40%);
+    -webkit-filter: brightness(40%); }
+  .img-pneumatique-mobile {
+    background-image: url(../img/pneumatique.jpg);
+    filter: brightness(40%);
+    -webkit-filter: brightness(40%); }
   .car-transform {
-    background-image: url(../img/car.jpg) !important; }
-  .car-transform .content {
-    display: none; }
+    filter: brightness(100%) !important;
+    -webkit-filter: brightness(100%) !important; }
+  .content-transform {
+    visibility: hidden !important; }
   .toggle-service {
     display: flex !important; }
   .block-below {
@@ -167,8 +193,6 @@
   #infos .container-contact .row .contact .contact-title h3 {
     font-size: 2em !important;
     padding-bottom: 5px; }
-  #infos .container-contact .row .contact .form-horizontal {
-    width: 90% !important; }
   #infos .container-contact .row .contact .contact-phone a p {
     font-size: 1.4em;
     margin-bottom: 0.7em !important; }
@@ -251,8 +275,25 @@
     text-align: center; }
   #services .car-block .orange:hover {
     transform: scale(1); }
-  .car {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/car.jpg) !important; } }
+  .img-vente {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/vente.jpg) !important; }
+  .img-reparation {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/reparation.jpg) !important; }
+  .img-location {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/location.jpg) !important; }
+  .img-pneumatique {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/pneumatique.jpg) !important; }
+  .half-block-right .block-inside {
+    flex-direction: column !important; }
+  .half-block-right .block-inside .img-slide {
+    width: 100% !important;
+    height: 30% !important;
+    background-size: cover !important; }
+  .half-block-right .block-inside .text-slide {
+    height: 70% !important;
+    width: 100% !important; }
+  .half-block-right .block-inside .text-slide .slide-inside img {
+    height: 20vh !important; } }
 
 @media (max-width: 766px) {
   #myProgress {
@@ -651,8 +692,18 @@ h3 {
   width: 100%;
   height: 100%; }
 
-.car, .img-slide {
-  background-image: url(../img/car.jpg); }
+.img-vente {
+  background-image: url(../img/vente.jpg); }
+
+.img-reparation {
+  background-image: url(../img/reparation.jpg); }
+
+.img-location {
+  background-image: url(../img/location.jpg);
+  background-position: 75% !important; }
+
+.img-pneumatique {
+  background-image: url(../img/pneumatique.jpg); }
 
 .orange:hover {
   transform: scale(0.95); }
@@ -918,7 +969,7 @@ h3 {
     justify-content: space-around;
     align-items: center; }
   #infos .contact .form-horizontal {
-    width: 60%; }
+    width: 100%; }
   #infos .container-contact .row .contact {
     display: flex;
     flex-direction: column;
@@ -986,7 +1037,7 @@ h3 {
   font-size: 0.8em; }
 
 #infos .container-contact .row .contact .form-horizontal {
-  width: 60%; }
+  width: 100%; }
 
 #infos .container-contact .row .contact .form-horizontal .form-group {
   margin-bottom: 5px;

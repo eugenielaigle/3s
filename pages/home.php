@@ -52,7 +52,7 @@
 
   <div class="container-margin">
     <div id="service1" class="car-block">
-      <div class="orange car">
+      <div class="orange car img-vente">
         <div class="transbox"></div>
         <div class="content">
           <h2>Vente de véhicules</h2>
@@ -60,7 +60,7 @@
       </div>
     </div>
     <div id="service2" class="car-block">
-      <div class="orange car">
+      <div class="orange car img-reparation">
         <div class="transbox"></div>
         <div class="content">
           <h2>Réparation & entretien</h2>
@@ -68,7 +68,7 @@
       </div>
     </div>
     <div id="service3" class="car-block">
-      <div class="orange car">
+      <div class="orange car img-location">
         <div class="transbox"></div>
         <div class="content">
           <h2>Location de véhicules</h2>
@@ -76,7 +76,7 @@
       </div>
     </div>
     <div id="service4" class="car-block">
-      <div class="orange car">
+      <div class="orange car img-pneumatique">
         <div class="transbox"></div>
         <div class="content">
           <h2>Pneumatique</h2>
@@ -133,7 +133,7 @@
         <div id="closeBlockSlide"></div>
         <!-- s -->
         <div class="block-inside" id="vente">
-          <div class="img-slide"></div>
+          <div class="img-slide img-vente"></div>
           <div class="text-slide">
             <div class="slide-inside">
               <img src="./dist/assets/img/vente_de_vehicule.png" alt="Vente de véhicules">
@@ -150,7 +150,7 @@
         </div>
 
         <div id="reparation" class="block-inside">
-          <div class="img-slide"></div>
+          <div class="img-slide img-reparation"></div>
           <div class="text-slide">
             <div class="slide-inside">
               <img src="./dist/assets/img/reparation_et_entretien.png" alt="Réparation et entretien">
@@ -167,7 +167,7 @@
         </div>
 
         <div id="location" class="block-inside">
-          <div class="img-slide"></div>
+          <div class="img-slide img-location"></div>
           <div class="text-slide">
             <div class="slide-inside">
               <img src="./dist/assets/img/loc_de_vehicule.png" alt="Location de véhicules">
@@ -183,7 +183,7 @@
         </div>
 
         <div id="entretien" class="block-inside">
-          <div class="img-slide"></div>
+          <div class="img-slide img-pneumatique"></div>
           <div class="text-slide">
             <div class="slide-inside">
               <img src="./dist/assets/img/pneumatique.png" alt="Pneumatiques">

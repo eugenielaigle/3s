@@ -151,9 +151,9 @@ $(document).scroll(function() {
 }
 });
 
-
+// Open-Close Menu
 $('.navbar-toggle').click(function(){
-    $("#icon-bar").toggleClass('close-menu');
+  $("#icon-bar").toggleClass('close-menu');
 });
 
 // BOUTON > MODAL
@@ -220,35 +220,35 @@ $(document).ready(function() {
 // ONCLICK CAR BLOCK ANIMATION
 if ($(window).width()> 767){
 
-$(document).ready(function serviceanimation(){
-  $("#service1").click(function(){
-    $("#btn_vente").toggleClass('active');
-    $("#vente").toggleClass('activity');
-    $(".block-slide").toggleClass('block-slide-active');
-    slideblock();
-  });
+  $(document).ready(function serviceanimation(){
+    $("#service1").click(function(){
+      $("#btn_vente").toggleClass('active');
+      $("#vente").toggleClass('activity');
+      $(".block-slide").toggleClass('block-slide-active');
+      slideblock();
+    });
 
-  $("#service2").click(function(){
-    $("#btn_reparation").toggleClass('active');
-    $("#reparation").toggleClass('activity');
-    $(".block-slide").toggleClass('block-slide-active');
-    slideblock();
-  });
+    $("#service2").click(function(){
+      $("#btn_reparation").toggleClass('active');
+      $("#reparation").toggleClass('activity');
+      $(".block-slide").toggleClass('block-slide-active');
+      slideblock();
+    });
 
-  $("#service3").click(function(){
-    $("#btn_location").toggleClass('active');
-    $("#location").toggleClass('activity');
-    $(".block-slide").toggleClass('block-slide-active');
-    slideblock();
-  });
+    $("#service3").click(function(){
+      $("#btn_location").toggleClass('active');
+      $("#location").toggleClass('activity');
+      $(".block-slide").toggleClass('block-slide-active');
+      slideblock();
+    });
 
-  $("#service4").click(function(){
-    $("#btn_entretien").toggleClass('active');
-    $("#entretien").toggleClass('activity');
-    $(".block-slide").toggleClass('block-slide-active');
-    slideblock();
+    $("#service4").click(function(){
+      $("#btn_entretien").toggleClass('active');
+      $("#entretien").toggleClass('activity');
+      $(".block-slide").toggleClass('block-slide-active');
+      slideblock();
+    });
   });
-});
 
 // SWITCH BLOCK LEFT
 
@@ -335,28 +335,48 @@ function closeslideblock(){
   $(".class-title").removeClass('active');
 });
 }
-} else{
+}else{
 
+// VERSION MOBILE - ANIMATION SERVICES
 var clicks = 0;
 
-        $('.orange').click(function(){
-          if(clicks == 0){
-            $('.orange').removeClass("car-transform");
-            $(this).toggleClass("car-transform");
-            $('.block-below').slideUp();
-            $(this).next(".block-below").slideDown(500,'swing');
-            clicks++;
-            console.log("abierto");
-          }else{
-            $('.orange').removeClass("car-transform");
-            $(this).toggleClass("car-transform");
-            $('.block-below').slideUp();
-            $(this).next(".block-below").slideDown(500,'swing');
-            clicks--;
-            console.log("cerrado");
-          }
-          console.log(clicks);
-        });
+$('.content').click(function(){
+  if(clicks == 0){
+    $('.orange').removeClass("car-transform");
+    $(this).prev('.orange').toggleClass("car-transform");
+    $('.content').removeClass("content-transform");
+    $(this).toggleClass("content-transform");
+    $('.block-below').slideUp();
+    $(this).next(".block-below").slideDown(500,'swing');
+    clicks++;
+
+  }else{
+    $('.orange').removeClass("car-transform");
+    $(this).prev('.orange').toggleClass("car-transform");
+    $('.content').removeClass("content-transform");
+    $(this).toggleClass("content-transform");
+    $('.block-below').slideUp();
+    $(this).next(".block-below").slideDown(500,'swing');
+    clicks--;
+
+  }
+
+});
+
+
+$('.orange').click(function(){
+  if(clicks == 0){
+    $(this).next('.content').toggleClass("content-transform");
+    $(this).removeClass("car-transform");
+    $('.block-below').slideUp();
+    clicks++;
+  }else{
+    $(this).next('.content').toggleClass("content-transform");
+    $(this).toggleClass("car-transform");
+    $('.block-below').slideUp();
+    clicks--;
+  }
+});
 }
 
 // SMOOTH SCROLL

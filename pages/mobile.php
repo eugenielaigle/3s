@@ -52,11 +52,10 @@
 
     <div class="container-margin">
       <div class="car-block">
-        <div class="orange car" id="service1">
-          <div class="content">
+        <div class="orange car img-vente-mobile" id="service1"></div>
+        <div class="content">
             <h2>Vente de véhicules</h2>
           </div>
-        </div>
 
 
       <div class="block-below" id="vente">
@@ -82,11 +81,10 @@
 
 
       <div id="service2" class="car-block">
-        <div class="orange car">
-          <div class="content">
+        <div class="orange car img-reparation-mobile"></div>
+        <div class="content">
             <h2>Réparation & entretien</h2>
           </div>
-        </div>
 
 
       <div id="reparation" class="block-below">
@@ -110,11 +108,10 @@
 
 
       <div id="service3" class="car-block">
-        <div class="orange car">
-          <div class="content">
+        <div class="orange car img-location-mobile"></div>
+        <div class="content">
             <h2>Location de véhicules</h2>
           </div>
-        </div>
 
 
       <div id="location" class="block-below">
@@ -136,11 +133,10 @@
 
 
       <div id="service4" class="car-block">
-        <div class="orange car">
-          <div class="content">
+        <div class="orange car img-pneumatique-mobile"></div>
+        <div class="content">
             <h2>Pneumatique</h2>
           </div>
-        </div>
 
 
 
@@ -268,7 +264,7 @@
           </div>
           <div class="contact-phone">
             <a href="https://goo.gl/maps/cHJLBgABfF52"><p>Douala</p></a>
-            <a href="https://goo.gl/maps/upKYgJgDz4o"><p class="margin-tel">Yaoundé</p></a>
+            <a href="https://goo.gl/maps/HDFxRRfeUvp"><p class="margin-tel">Yaoundé</p></a>
           </div>
         </div>
       </div> <!-- end adresses -->
